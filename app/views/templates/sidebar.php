@@ -7,7 +7,7 @@
         <?php
         $halaman = $data['judul'];
         
-        if ($_SESSION["role_user"] == 'Admin') { ?>
+        if ($_SESSION["level"] == 'Admin') { ?>
             <a href="<?= BASEURL;?>/Pengguna/detilProfile/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/edituser.png" alt="" width="20" heigth="20">&nbsp Profile</a>
             <a href="<?= BASEURL;?>/Project/index" <?php if($halaman == "Project") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/project.png" alt="" width="20" heigth="20">&nbsp Data Project</a>
             <a href="<?= BASEURL;?>/ListOfMaterial/index" <?php if($halaman == "List Material") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/mitra.png" alt="" width="20" heigth="20">&nbsp Data List Material</a>
@@ -18,7 +18,7 @@
                                
         <?php }
         
-        else if($_SESSION["role_user"] == 'Pakar'){ ?>
+        else if($_SESSION["level"] == 'Pakar'){ ?>
             <a href="<?= BASEURL;?>/Pengguna/detilProfile/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/edituser.png" alt="" width="20" heigth="20">&nbsp Profile</a>
             <a href="<?= BASEURL;?>/Project/index" <?php if($halaman == "Project") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/project.png" alt="" width="20" heigth="20">&nbsp Data Project</a>
             <a href="<?= BASEURL;?>/ListOfMaterial/index" <?php if($halaman == "List Material") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/mitra.png" alt="" width="20" heigth="20">&nbsp Data List Material</a>
@@ -27,7 +27,7 @@
             <a href="<?= BASEURL;?>/Berkas/index/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Modul Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/berkas.png" alt="" width="20" heigth="20">&nbsp Modul Pengetahuan</a>
         <?php } 
         // Role user Admin Procurement
-        else if($_SESSION["role_user"] == 'Anggota'){ ?>
+        else if($_SESSION["level"] == 'Pegawai'){ ?>
             <a href="<?= BASEURL;?>/Pengguna/detilProfile/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/edituser.png" alt="" width="20" heigth="20">&nbsp Profile</a>
             <a href="<?= BASEURL;?>/DesainOSP/index" <?php if($halaman == "Design OSP FO") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/desain.png" alt="" width="20" heigth="20">&nbsp Data Design OSP FO</a>
             <a href="<?= BASEURL;?>/Berkas/index/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Modul Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/berkas.png" alt="" width="20" heigth="20">&nbsp Modul Pengetahuan</a>  
@@ -45,7 +45,7 @@
     </div>
     <div class="user-area">
         <!-- <p> Welcome <?= $_SESSION['nama'] ?> </p> -->
-        (<?= $_SESSION['role_user'] ?>), <?= $_SESSION['nama'] ?> 
+        (<?= $_SESSION['level'] ?>), <?= $_SESSION['nama'] ?> 
         <a href="<?= BASEURL;?>/login/logout"><img style="float : right; margin-left : 15px;" src="<?= BASEURL;?>/img/logout.png" alt="" width="40" heigth="40"></a>
     </div>
 </header>

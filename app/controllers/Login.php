@@ -8,34 +8,34 @@ class Login extends Controller {
 	public function cekLogin() {
 
 
-		$username = $_POST["username"];
-		$password = md5($_POST["pass"]);
+		$idUser = $_POST["id_user"];
+		$password = $_POST["password"];
 		
 		// GET DATA USER
 		$post = array(
-			'username' => $username,
-			'pass' => $password
+			'id_user' => $idUser,
+			'password' => $password
 		);
 
 		$data['pengguna'] = $this->model('DataHandle')->getDataLogin($post);
 		
 		$pengguna = $this->model('DataHandle')->cekDataLogin($post);
-		if( $this->model('DataHandle')->cekData($table = 'tbl_pengguna') > 0) {
+		if( $this->model('DataHandle')->cekData($table = 'tbl_user') > 0) {
 			// login pertama
 			if( $this->model('DataHandle')->cekDataLogin($post) > 0) {
 						
-				$_SESSION['nik'] = $data['pengguna']['nik'];
-				$_SESSION['nama'] = $data['pengguna']['nama'];
+				$_SESSION['id_user'] = $data['pengguna']['id_user'];
+				$_SESSION['level'] = $data['pengguna']['level'];
 				$_SESSION['username'] = $data['pengguna']['username'];
-				$_SESSION['role_user'] = $data['pengguna']['role_user'];
-				$nik = $data['pengguna']['nik'];
+				$_SESSION['nama'] = $data['pengguna']['nama'];
+				//$nik = $data['pengguna']['id_user'];
 
 				//masukan data ke log masuk
-				$this->model('DataHandle')->simpanDataLogin($nik);
+				//$this->model('DataHandle')->simpanDataLogin($nik);
 
 				
 				//$this->view('dashboard/index', $data_user);
-				header('Location: ' . BASEURL . '/Pengguna/detilProfile/' . $_SESSION['nik'] .'');
+				header('Location: ' . BASEURL . '/Pengguna/index/');
 			
 			} else {
 				//echo "ehy";

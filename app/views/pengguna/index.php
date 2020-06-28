@@ -22,16 +22,15 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>NIK</th>
-                <th>Nama Lengkap</th>
-                <th>Jenis Kelamin</th>
+                <th>Id User</th>
+                <th>Nama</th>
+                <th>Level</th>
                 <th>Username</th>
-                <th>Unit</th>
-                <th>Jabatan</th>
-                <th>Jenis User</th>
+                <th>Password</th>
                 <th>No Handphone</th>
                 <th>Email</th>
-                <th>Aksi</th>
+                <th>Proses</th>
+                
             </tr>
             </thead>
             <tbody>
@@ -40,18 +39,16 @@
             <?php foreach ( $data['data_pengguna'] as $pengguna ) : ?>
             <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $pengguna['nik'] ?></td>
+                <td><?= $pengguna['id_user'] ?></td>
                 <td><?= $pengguna['nama'] ?></td>
-                <td><?= $pengguna['jk'] ?></td>
+                <td><?= $pengguna['level'] ?></td>
                 <td><?= $pengguna['username'] ?></td>
-                <td><?= $pengguna['unit'] ?></td>
-                <td><?= $pengguna['jabatan'] ?></td>
-                <td><?= $pengguna['role_user'] ?></td>
+                <td><?= $pengguna['password'] ?></td>
                 <td><?= $pengguna['no_hp'] ?></td>
                 <td><?= $pengguna['email'] ?></td>
                 <td>
-                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['nik'] ?>/<?= $pengguna['role_user'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
-                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['nik'] ?>/<?= $pengguna['role_user'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
                 </td>
             </tr>
             <?php endforeach; ?>

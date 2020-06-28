@@ -2,19 +2,19 @@
 
 class Pengguna extends Controller {
 	public function __construct(){
-		if(!isset($_SESSION["username"]))  {  
-			header('Location: ' . BASEURL . '/login/index');  
-		}	
+		// if(!isset($_SESSION["username"]))  {  
+		// 	header('Location: ' . BASEURL . '/login/index');  
+		// }	
 	}
 
     public function index() {
-		if($_SESSION["role_user"] !== 'Admin') {
-			header('Location: ' . BASEURL . '/login/index');
-		}
+		// if($_SESSION["role_user"] !== 'Admin') {
+		// 	header('Location: ' . BASEURL . '/login/index');
+		// }
 
-        $data['judul'] = 'Pengguna';
+        $data['judul'] = 'User';
 		$data['sub_judul'] = 'Daftar Pengguna';
-		$data['data_pengguna'] = $this->model('DataHandle')->getAll($table = 'tbl_pengguna');
+		$data['data_pengguna'] = $this->model('DataHandle')->getAll($table = 'tbl_user');
 		
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
@@ -67,12 +67,12 @@ class Pengguna extends Controller {
 		}
 	}
 
-	public function hapus($id, $role) {
-		if($_SESSION["nik"] == $id || $role == 'Admin') {
+	public function hapus($id, $level) {
+		if($_SESSION["id_user"] == $id || $level == 'Admin') {
 			header('Location: ' . BASEURL . '/pengguna/index');
 			Flasher::setFlash('Pengguna dengan role admin','tidak dapat dihapus','CssHapus');
 		} else {
-			if( $this->model('DataHandle')->hapusData($id, $table = 'tbl_pengguna', $id_table = 'nik') > 0) {
+			if( $this->model('DataHandle')->hapusData($id, $table = 'tbl_user', $id_table = 'id_user') > 0) {
 				Flasher::setFlash('Berhasil','dihapus','CssHapus');
 				header('Location: ' . BASEURL . '/pengguna/index');
 				exit;
@@ -84,14 +84,15 @@ class Pengguna extends Controller {
 		}
 	}
  
-	public function getUbah($id, $role){
-		if($role == 'Admin') {
+	public function getUbah($id, $level){
+		if($level == 'Admin') {
 			header('Location: ' . BASEURL . '/pengguna/index');
 			Flasher::setFlash('Pengguna dengan role admin','tidak dapat diubah','CssHapus');
 		} else {
 			$data['judul'] = 'Pengguna';
 			$data['sub_judul'] = 'Ubah Data Pengguna';
-			$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_pengguna',$id_table = 'nik', $id);
+
+			$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_user',$id_table = 'id_user', $id);
 			$this->view('templates/header', $data);
 			$this->view('templates/sidebar', $data);
 			$this->view('pengguna/v_ubah_pengguna', $data);

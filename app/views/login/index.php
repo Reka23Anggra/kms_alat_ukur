@@ -22,11 +22,11 @@
             <label for="user-email" style="padding-top:13px">
                 &nbsp;Username
             </label>
-            <input id="user-email" class="form-content" type="text" name="username" autocomplete="on" required />
+            <input id="user-email" class="form-content" type="text" name="id_user" autocomplete="on" required />
             <div class="form-border"></div>
             <label for="user-password" style="padding-top:22px">&nbsp;Password
             </label>
-            <input id="user-password" class="form-content" type="password" name="pass" required />
+            <input id="user-password" class="form-content" type="password" name="password" required />
             <div class="form-border"></div>
             <a href="#">
             <legend id="forgot-pass">Lupa password ?</legend>
