@@ -31,13 +31,13 @@ class Flasher {
     }
 
     public static function startSession() {
-        if($_SESSION["role_user"] == '') {
+        if($_SESSION["level"] == 'Admin') {
 			header('Location: ' . BASEURL . '/login/index');
 		}
-		else if($_SESSION["role_user"] == 'Pakar') {
+		else if($_SESSION["level"] == 'Pakar') {
 			header('Location: ' . BASEURL . '/login/index');
         }
-        else if($_SESSION["role_user"] == 'Anggota') {
+        else if($_SESSION["level"] == 'Pegawai') {
 			header('Location: ' . BASEURL . '/login/index');
 		}
     }

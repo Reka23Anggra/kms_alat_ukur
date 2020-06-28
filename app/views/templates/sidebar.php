@@ -39,8 +39,8 @@
     <div class="search-area">
         <div>  
             <button class="openbtn" onclick="openNav()">☰</button>
-            <!-- <a href="<?= BASEURL;?>/Obrolan/index/<?= $_SESSION['nik'] ?>"><img style="float : right; margin-left : 15px;" src="<?= BASEURL;?>/img/chat.png" alt="" width="35" heigth="35"></a>  -->
-            <a href="<?= BASEURL;?>/Pesan/index/<?= $_SESSION['nik'] ?>"><img style="float : right; margin-left : 15px;" src="<?= BASEURL;?>/img/pesan.png" alt="" width="35" heigth="35"></a> 
+            <!-- <a href="<?= BASEURL;?>/Obrolan/index/<?= $_SESSION['id_user'] ?>"><img style="float : right; margin-left : 15px;" src="<?= BASEURL;?>/img/chat.png" alt="" width="35" heigth="35"></a>  -->
+            <a href="<?= BASEURL;?>/Pesan/index/<?= $_SESSION['id_user'] ?>"><img style="float : right; margin-left : 15px;" src="<?= BASEURL;?>/img/pesan.png" alt="" width="35" heigth="35"></a> 
         </div>
     </div>
     <div class="user-area">

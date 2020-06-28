@@ -17,7 +17,7 @@
                     <input type="text" class="input-text" name="id_user" value="<?= $data['data_tacit']['id_user'] ?>" disable required/>
                 </label>
                 <label for="nama">
-                    <span>NAMA LENGKAP<span class="required">*</span></span>
+                    <span>Nama Lengkap<span class="required">*</span></span>
                     <input type="text" class="input-text" name="nama" value="<?= $data['data_tacit']['nama'] ?>" required/>
                 </label>
                 <label for="nm_alat">
@@ -29,20 +29,20 @@
                     <input type="text" class="input-text" name="fungsi" value="<?= $data['data_tacit']['fungsi'] ?>" required/>
                 </label>
                 <label for="penggunaan_alat">
-                    <span>Fungsi Alat<span class="required">*</span></span>
+                    <span>Penggunaan Alat<span class="required">*</span></span>
                     <input type="text" class="input-text" name="penggunaan_alat" value="<?= $data['data_tacit']['penggunaan_alat'] ?>" required/>
                 </label>
                 <label for="perawatan_alat">
-                    <span>Fungsi Alat<span class="required">*</span></span>
+                    <span>Perawatan Alat<span class="required">*</span></span>
                     <input type="text" class="input-text" name="perawatan_alat" value="<?= $data['data_tacit']['perawatan_alat'] ?>" required/>
                 </label>
                 <label for="satuan">
-                    <span>Fungsi Alat<span class="required">*</span></span>
+                    <span>Satuan Alat<span class="required">*</span></span>
                     <input type="text" class="input-text" name="satuan" value="<?= $data['data_tacit']['satuan'] ?>" required/>
                 </label>
                 
                 
-                <label><span> </span><input type="submit" value="SIMPAN" ><a href="<?= BASEURL; ?>/Tacit/resetPass/<?= $data['data_tacit']['id_user'] ?>">RESET PASSWORD</a><a href="<?= BASEURL; ?>/Pengguna/index">KEMBALI</a></label>
+                <label><span> </span><input type="submit" value="SIMPAN" ><a href="<?= BASEURL; ?>/Tacit/index">KEMBALI</a></label>
                 
             </form>
         </div>
