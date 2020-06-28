@@ -1,0 +1,626 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    -webkit-font-smoothing: antialiased;
+    background: #eeeeee;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px 10px 10px;
+    box-shadow: 0px 15px 15px #00000033;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    border-bottom: 0.1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.fl-table thead th {
+    color: #000000;
+    background: #63b1c9;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #000000;
+    background: #63b1c9;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #e0dfdf;
+}
+
+.fl-table tr:hover {
+    background: #4fd5da;
+}
+
+#myTable {
+    font-family: "Raleway", sans-serif;
+    /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+  }
+  
+  #myTable td, #myTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #myTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #myTable tr:hover {background-color: #4fd5da;}
+  
+  #myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #63b1c9;
+    color: #000000;
+}
+
+#myTable2 {
+    font-family: "Raleway", sans-serif;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+  }
+  
+#myTable2 td, #myTable2 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+#myTable2 tr:nth-child(even){background-color: #f2f2f2;}
+  
+#myTable2 tr:hover {background-color: #4fd5da;}
+  
+#myTable2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #63b1c9;
+    color: #000000;
+}
+
+#tblDistribusi {
+    font-family: "Raleway", sans-serif;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+  }
+  
+#tblDistribusi td, #tblDistribusi th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+#tblDistribusi tr:nth-child(even){background-color: #f2f2f2;}
+  
+#tblDistribusi tr:hover {background-color: #4fd5da;}
+  
+#tblDistribusi th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #63b1c9;
+    color: #000000;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 14px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+.judul {
+    margin-top: 10px;
+    width: 100%;
+    background: #109fca;
+    border: 0.5px solid #109fca;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 15px 10px 15px 10px;
+}
+
+.dashboard-frame {
+    width: 100%;
+    height: 760px;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.icon-data {
+    background-color: #f01414;
+  }
+
+.text-data {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.data-table {
+    width: 100%;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-radius: 3px;
+    padding-left: 0px;  
+}
+
+.head-table {
+    margin-top: 10px;
+    width: 100%;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-bottom: 0px;
+    color: #252525;
+    border-radius: 3px;
+    padding: 15px 10px 15px 10px;
+}
+
+.head-chat {
+    margin-top: 0px;
+    width: 100%;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    color: #252525;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+pesan-masuk {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #1982e4;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    transition: background .3s;
+    border-radius: 4px;
+}
+
+td a:link {
+	text-decoration: none;
+    display: inline-block;
+    background-color: #db2727;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    transition: background .3s;
+    border-radius: 4px;
+}
+td a:visited {
+	color: #FFFFFF;
+}
+td a:hover {
+	background-color: #6e2222;
+}
+
+.navigasi a:link {
+	text-decoration: none;
+    display: inline-block;
+    background-color: #db2727;
+    color: #FFFFFF;
+    padding: 8px 10px;
+    transition: background .3s;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.navigasi a:visited {
+	color: #FFFFFF;
+}
+.navigasi a:hover {
+	background-color: #6e2222;
+}
+
+.navigasi .pencarian {
+    padding: 10px 15px;
+}
+
+.judul a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.tombol {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    transition: background .3s;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.tombol:visited {
+	color: #FFFFFF;
+}
+
+.tombol:hover {
+	background-color: #6e2222;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+div .CssTambah {
+    width: 30%;
+    background-color: #16e48e;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px 10px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+div .CssHapus {
+    width: 30%;
+    background-color: #c0392b;
+    color: #FFFFFF;
+    padding: 10px 15px 10px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+div .CssUpdate {
+    width: 30%;
+    background-color: #16e48e;
+    color: #FFFFFF;
+    padding: 10px 15px 10px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.update-progres {
+    width: 45px;
+    height: 40px;
+    background: #c0392b;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.update-progres:hover {
+    background: #6b1c13;
+}
+
+/* Style untuk Sidebar Menu Pesan */
+.menuPesan {
+    width: 20%;
+    height: 700px;
+    padding-left: 100px;
+    float: left;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-bottom: 0px;
+    color: #252525;
+    border-radius: 3px;
+    padding: 15px 10px 15px 10px;
+  }
+
+  
+  .mainPesan {
+    width: 80%;
+    float: left;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-bottom: 0px;
+    color: #252525;
+    border-radius: 3px;
+    padding: 15px 10px 15px 10px;
+  }
+
+  .mainPesan2 {
+    height: 475px;
+    width: 100%;
+    float: left;
+    background: #ffffff;
+    border: 0.5px solid #b6b2b2;
+    border-bottom: 0px;
+    color: #252525;
+    border-radius: 3px;
+    padding: 15px 10px 15px 10px;
+  }
+
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #109fca;
+    color: white;
+  }
+
+  .sidebar a.compose {
+    background-color: #a70e0e;
+    color: white; 
+  }
+
+  .sidebar a.penerimaObrolan {
+    background-color: #a8a7a7;
+    color: white; 
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #109fca;
+    color: white;
+  }
+  
+#myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 25%;
+    font-size: 14px;
+    padding: 11px 19px 11px 15px;
+    border: 0.5px solid #505050;
+    margin-bottom: 12px;
+}
+
+
+#optionFilter {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 190px;
+    font-size: 14px;
+    padding: 10px 19px 10px 5px;
+    border: 0.5px solid #505050;
+    margin-bottom: 12px
+}
+
+.search-area a:hover {
+    background-color: #109fca;
+    color: white;
+}
+
+.grid-project {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #109fca;
+    color: #FFFFFF;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+#cariObrolan {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 11px 19px 11px 15px;
+    border: 0.5px solid #505050;
+    margin-bottom: 12px;
+}
+
+#inputObrolan {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 85%;
+    font-size: 14px;
+    padding: 11px 19px 11px 15px;
+    border: 0.5px solid #505050;
+    margin-bottom: 12px;
+}
+
+#div_chat {
+    height: 550px;
+    width: 100%;
+    overflow: auto;
+    background-color: #dcdcdc80;
+    border: 0.5px solid #b6b2b2;
+    margin: 12px 0;
+    padding: 10px;
+}
+
+input[type=button] {
+	border: none;
+	padding: 12px 15px 12px 15px;
+	background: #e01b1b;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+input[type=button]:hover {
+	background: #690c0c;
+	color: #fff;
+}
+
+
+.selectOption {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 19px 10px 5px;
+    border: 0.5px solid #505050;
+}
+
+
+.selectDesignator {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 19px 10px 5px;
+    border: 0.5px solid #505050;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    height: 100%; 
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #109fca;
+    padding: 10px;
+  }
+  
+  .grid-container1 > div {
+    background-color: #ffffffcc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+  }
