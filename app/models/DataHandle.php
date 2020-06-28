@@ -132,6 +132,56 @@ class DataHandle {
         $this->db->execute();
 
         return $this->db->rowCount();
+    
+    }
+
+    public function AmbilDataMax($table, $id_table)
+    {
+        $query = "select max ('' . $id_table . '') from ' . $table . '";
+        $this->db->execute();
+
+        return $this->db->single();
+    }
+
+    public function tambahDataTacit($data)
+     {
+            // var_dump ($data);
+        $query = "INSERT INTO tbl_tacit VALUES (:id_tacit, :id_user, :nama, :nm_alat, :fungsi, :penggunaan_alat, :perawatan_alat, :satuan)";
+
+        $this->db->query($query);
+        $this->db->bind('id_tacit', $data['id_tacit']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nm_alat', $data['nm_alat']);
+        $this->db->bind('fungsi', $data['fungsi']);
+        $this->db->bind('penggunaan_alat', $data['penggunaan_alat']);
+        $this->db->bind('perawatan_alat', $data['perawatan_alat']);
+        $this->db->bind('satuan', $data['satuan']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+
+    }
+
+    public function ubahDataTacit($data)
+    {
+        $query = "UPDATE tbl_tacit SET id_tacit = :id_tacit, id_user = :id_user, nama = :nama, nm_alat = :nm_alat, fungsi = :fungsi,  penggunaan_alat = :penggunaan_alat, perawatan_alat = :perawatan_alat, satuan = :satuan WHERE id_tacit = :id_tacit";
+
+        $this->db->query($query);
+        $this->db->bind('id_tacit', $data['id_tacit']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('nm_alat', $data['nm_alat']);
+        $this->db->bind('fungsi', $data['fungsi']);
+        $this->db->bind('penggunaan_alat', $data['penggunaan_alat']);
+        $this->db->bind('perawatan_alat', $data['perawatan_alat']);
+        $this->db->bind('satuan', $data['satuan']);
+
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
     }
 
 }
