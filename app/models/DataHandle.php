@@ -281,4 +281,27 @@ class DataHandle {
         tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit ');
         return $this->db->resultSet();
     }
+
+    public function getCetakById($id, $table) {
+        $this->db->query('SELECT
+        tbl_perawatan.id_perawatan_alat,
+        tbl_tacit.nm_alat,
+        tbl_tacit.id_tacit,
+        tbl_eksplisit.id_eksplisit,
+        tbl_tacit.fungsi,
+        tbl_tacit.penggunaan_alat,
+        tbl_tacit.perawatan_alat,
+        tbl_eksplisit.perawatan_alat,
+        tbl_tacit.satuan
+        FROM
+        tbl_perawatan ,
+        tbl_tacit,
+        tbl_eksplisit
+        WHERE
+        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit');
+         
+         $this->db->bind('id_perawatan_alat', $id);
+
+         return $this->db->single();
+    }
 }

@@ -3,21 +3,10 @@ class Cetak extends Controller {
     public function index() {
         $data['judul'] = 'Perawatan';
 		$data['sub_judul'] = 'Cetak Data Perawatan';
-		
-		if ($_SESSION["level"] == 'Admin') {
-			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
-		}else
-		{	
-            if ($_SESSION["level"] == 'Pakar')
-            {
-                $data['cetak_data'] = $this->model('DataHandle')->getCetak();
-            }
-			else{
-                    ($_SESSION["level"] == 'Pegawai')
-                     $data['cetak_data'] = $this->model('DataHandle')->getCetak();
-                }
-        }   
-    }
+		$data['cetak_data'] = $this->model('DataHandle')->getCetak();
+        
+        // $id = $_SESSION['id_perawatan_alat'];
+        // $data['cetak_data'] = $this->model('DataHandle')->getProjectById($id);
         
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
@@ -28,17 +17,12 @@ class Cetak extends Controller {
     public function getData() {
         $data['judul'] = 'Perawatan';
         $data['sub_judul'] = 'Cetak Data Perawatan';
-        if ($_SESSION["level"] == 'Admin') {
-			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
-		}else
-		{	
-            if ($_SESSION["level"] == 'Pakar')
-            $data['cetak_data'] = $this->model('DataHandle')->getCetak();
-		}else {
-			if ($_SESSION["level"] == 'Pegawai')
-            $data['cetak_data'] = $this->model('DataHandle')->getCetak();
-        }
+        $data['cetak_data'] = $this->model('DataHandle')->getCetak();
         
+            // $id = $_SESSION['id_perawatan_alat'];
+            // $data['cetak_data'] = $this->model('DataHandle')->getProjectById($id);
+        
+        $this->view('cetak/v_cetak', $data);
     }
     
 }

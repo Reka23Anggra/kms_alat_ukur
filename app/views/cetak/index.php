@@ -30,6 +30,7 @@
                 <th>Perawatan Alat Tacit</th>
                 <th>Perawatan Alat Eksplisit</th>
                 <th>Satuan Alat</th>
+                <th>Proses</th>
                 
             </tr>
             </thead>
@@ -45,9 +46,13 @@
                 <td><?= $print['id_eksplisit'] ?></td>
                 <td><?= $print['fungsi'] ?></td>
                 <td><?= $print['penggunaan_alat'] ?></td>
-                <td><?= $print['perawatan_alat_tacit'] ?></td>
-                <td><?= $print['perawatan_alat_eks'] ?></td>
+                <td><?= $print['perawatan_alat'] ?></td>
+                <td><?= $print['perawatan_alat'] ?></td>
                 <td><?= $print['satuan'] ?></td>
+               
+                <td>
+                <a title="Hapus Data" href="<?= BASEURL; ?>/Cetak/getData/<?= $print['id_perawatan_alat'] ?>" onClick="return confirm('Anda Yakin Akan Mencetak ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                </td>
             </tr>
             <?php endforeach; ?>
             <tbody>
