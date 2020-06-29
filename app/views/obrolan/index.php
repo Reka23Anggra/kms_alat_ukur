@@ -8,12 +8,12 @@
     <div class="navigasi">
         <?php Flasher::flash(); ?>
         <form action="">
-            <a href="<?= BASEURL; ?>/Pengguna/tambahData">Tambah Data</a>
-            <select id="optionFilter"" name="optionFilter">
+            <a href="<?= BASEURL; ?>/Obrolan/tambahData">Tambah Pertanyaan</a>
+            <!-- <select id="optionFilter"" name="optionFilter">
                 <option value="1">NIK</option>
                 <option value="2">Nama Karyawan</option>
-            </select>
-            <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
+            </select> -->
+            <!-- <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini"> -->
         </form>    
     </div>
     <!-- ini bagian judul -->
@@ -22,14 +22,11 @@
             <thead>
             <tr>
                 <th>No</th>
+                <th>ID Diskusi</th>
                 <th>NIK</th>
                 <th>Nama</th>
-                <th>Jenis Kelamin</th>
+                <th>Pertanyaan</th>
                 <th>Level</th>
-                <th>Username</th>
-                <!-- <th>Password</th> -->
-                <th>No Handphone</th>
-                <th>Email</th>
                 <th>Proses</th>
                 
             </tr>
@@ -37,20 +34,18 @@
             <tbody>
             <?php
             $no = 1; ?>
-            <?php foreach ( $data['data_pengguna'] as $pengguna ) : ?>
+            <?php foreach ( $data['data_chat'] as $pertanyaan ) : ?>
             <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $pengguna['id_user'] ?></td>
-                <td><?= $pengguna['nama'] ?></td>
-                <td><?= $pengguna['jk'] ?></td>
-                <td><?= $pengguna['level'] ?></td>
-                <td><?= $pengguna['username'] ?></td>
-                <!-- <td><?= $pengguna['password'] ?></td> -->
-                <td><?= $pengguna['no_hp'] ?></td>
-                <td><?= $pengguna['email'] ?></td>
+                <td><?= $pertanyaan['id_chat'] ?></td>
+                <td><?= $pertanyaan['id_user'] ?></td>
+                <td><?= $pertanyaan['nama'] ?></td>
+                <td><?= $pertanyaan['chat'] ?></td>
+                <td><?= $pertanyaan['level'] ?></td>
+
                 <td>
-                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
-                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/obrolan/getUbah/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/obrolan/hapus/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
                 </td>
             </tr>
             <?php endforeach; ?>

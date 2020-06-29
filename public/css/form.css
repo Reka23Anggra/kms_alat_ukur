@@ -22,7 +22,7 @@
 	padding-right: 5px;
 }
 .gaya-form span.required{
-	color:red;
+	color:rgb(64, 171, 185);
 }
 
 .gaya-form input.input-text, .gaya-form .select-field{
@@ -50,7 +50,7 @@
 .gaya-form .input-text:focus, , 
 .gaya-form .textarea-field:focus,  
 .gaya-form .select-field:focus{
-	border: 1px solid #e01b1b;
+	border: 1px solid #85afc7;
 }
 
 .gaya-form .textarea-field{
@@ -63,8 +63,8 @@
 .gaya-form input[type=image]{
 	border: none;
 	padding: 8px 15px 8px 15px;
-	background: #e01b1b;
-	color: #fff;
+	background: #5259b4;
+	color: rgb(12, 11, 11);
 	box-shadow: 1px 1px 4px #DADADA;
 	-moz-box-shadow: 1px 1px 4px #DADADA;
 	-webkit-box-shadow: 1px 1px 4px #DADADA;
@@ -75,7 +75,7 @@
 .gaya-form input[type=submit]:hover,
 .gaya-form input[type=button]:hover,
 .gaya-form input[type=image]:hover{
-	background: #690c0c;
-	color: #fff;
+	background: #85afc7;
+	color: rgb(15, 15, 15);
 }
 

@@ -54,17 +54,17 @@ class Eksplisit extends Controller {
     }
     
     public function ubahData() {
-		var_dump($_POST);
+		//var_dump($_POST);
 
-		// if( $this->model('DataHandle')->ubahDataEksplisit($_POST) > 0) {
-		//  	Flasher::setFlash('Berhasil','diubah','CssUpdate');
-		//  	header('Location: ' . BASEURL . '/Eksplisit/index');
-		//  	exit;
-		// } else {
-		//  	Flasher::setFlash('gagal','diubah','CssHapus');
-		//  	header('Location: ' . BASEURL . '/Eksplisit/index');
-		//  	exit;
-		// }
+		if( $this->model('DataHandle')->ubahDataEksplisit($_POST) > 0) {
+		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
+		 	header('Location: ' . BASEURL . '/Eksplisit/index');
+		 	exit;
+		} else {
+		 	Flasher::setFlash('gagal','diubah','CssHapus');
+		 	header('Location: ' . BASEURL . '/Eksplisit/index');
+		 	exit;
+		}
     }   
     
     public function hapus($id)

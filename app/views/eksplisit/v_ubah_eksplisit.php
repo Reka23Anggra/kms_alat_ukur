@@ -46,7 +46,7 @@
                 </label>
                 
                 
-                <label><span> </span><input type="submit" value="SIMPAN" ><<a href="<?= BASEURL; ?>/Eksplisit/index">KEMBALI</a></label>
+                <label><span> </span><input type="submit" value="SIMPAN" ><a href="<?= BASEURL; ?>/Eksplisit/index">KEMBALI</a></label>
                 
             </form>
         </div>

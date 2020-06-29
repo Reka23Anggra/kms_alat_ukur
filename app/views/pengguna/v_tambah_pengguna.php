@@ -10,21 +10,21 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Pengguna/simpan/" method="post">
                 <label for="id_user">
-                    <span>Id User<span class="required">*</span></span>
+                    <span>NIK<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_user" value="" required/>
                 </label>
                 <label for="nama">
                     <span>Nama Lengkap<span class="required">*</span></span>
                     <input type="text" class="input-text" name="nama" value="" required/>
                 </label>
-                <!-- <label for="jk">
-                    <span>JENIS KELAMIN</span>
+                <label for="jk">
+                    <span>Jenis Kelamin</span>
                     <select name="jk" class="select-field">
-                        <option value="">--Pilih Jenis Kelamin--</option>
+                        <option value="">>>Pilih Jenis Kelamin<<</option>
                         <option value="L">Laki - laki</option>
                         <option value="P">Perempuan</option>
                     </select>
-                </label> -->
+                </label>
                 <label for="level">
                     <span>Level User</span>
                     <select name="level" class="select-field">

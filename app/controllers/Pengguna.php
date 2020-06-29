@@ -70,7 +70,7 @@ class Pengguna extends Controller {
 	public function hapus($id, $level) {
 		if($_SESSION["id_user"] == $id || $level == 'Admin') {
 			header('Location: ' . BASEURL . '/pengguna/index');
-			Flasher::setFlash('Pengguna dengan role admin','tidak dapat dihapus','CssHapus');
+			Flasher::setFlash('Pengguna dengan level admin','tidak dapat dihapus','CssHapus');
 		} else {
 			if( $this->model('DataHandle')->hapusData($id, $table = 'tbl_user', $id_table = 'id_user') > 0) {
 				Flasher::setFlash('Berhasil','dihapus','CssHapus');
@@ -87,7 +87,7 @@ class Pengguna extends Controller {
 	public function getUbah($id, $level){
 		if($level == 'Admin') {
 			header('Location: ' . BASEURL . '/pengguna/index');
-			Flasher::setFlash('Pengguna dengan role admin','tidak dapat diubah','CssHapus');
+			Flasher::setFlash('Pengguna dengan level admin','tidak dapat diubah','CssHapus');
 		} else {
 			$data['judul'] = 'Pengguna';
 			$data['sub_judul'] = 'Ubah Data Pengguna';
@@ -116,9 +116,9 @@ class Pengguna extends Controller {
 	}   
 
 	public function ubahProfile($id) {
-		$data['judul'] = 'Profile';
-		$data['sub_judul'] = 'Ubah Data Profile';
-		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_pengguna',$id_table = 'nik', $id);
+		$data['judul'] = 'Profil';
+		$data['sub_judul'] = 'Ubah Data Profil';
+		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_user',$id_table = 'id_user', $id);
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
 		$this->view('pengguna/v_ubah_profile', $data);
@@ -130,11 +130,11 @@ class Pengguna extends Controller {
 
 		if( $this->model('DataHandle')->ubahDataPengguna ($_POST) > 0) {
 		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
-		 	header('Location: ' . BASEURL . '/pengguna/detilProfile/' . $_SESSION['nik'] .'');
+		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/' . $_SESSION['id_user'] .'');
 		 	exit;
 		} else {
 		 	Flasher::setFlash('gagal','diubah','CssHapus');
-		 	header('Location: ' . BASEURL . '/pengguna/detilProfile/' . $_SESSION['nik'] .'');
+		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/' . $_SESSION['id_user'] .'');
 		 	exit;
 		}
 	}
@@ -142,7 +142,7 @@ class Pengguna extends Controller {
 	public function ubahPass($id) {
 		$data['judul'] = 'Profile';
 		$data['sub_judul'] = 'Ubah Password Profile';
-		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_pengguna',$id_table = 'nik', $id);
+		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_user',$id_table = 'id_user', $id);
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
 		$this->view('pengguna/v_ubah_pass', $data);
@@ -151,17 +151,17 @@ class Pengguna extends Controller {
 
 	public function simpanPass() {
 
-		$nik = $_POST["nik"];
-		$pass_lama = md5($_POST["pass_lama"]);
-		$pass_baru = md5($_POST["pass_baru"]);
-		$conf_pass_baru = md5($_POST["conf_pass_baru"]);
+		$nik = $_POST["id_user"];
+		$pass_lama = md5($_POST["password_lama"]);
+		$pass_baru = md5($_POST["password_baru"]);
+		$conf_pass_baru = md5($_POST["conf_password_baru"]);
 		
 		// GET DATA PASS
 		$post = array(
-			'nik' => $nik,
-			'pass_lama' => $pass_lama,
-			'pass_baru' => $pass_baru,
-			'conf_pass_baru' => $conf_pass_baru
+			'id_user' => $nik,
+			'password_lama' => $pass_lama,
+			'password_baru' => $pass_baru,
+			'conf_password_baru' => $conf_pass_baru
 		);
 
 		// login pertama

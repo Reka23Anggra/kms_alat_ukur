@@ -9,7 +9,7 @@ class Login extends Controller {
 
 
 		$idUser = $_POST["id_user"];
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 		
 		// GET DATA USER
 		$post = array(
@@ -35,14 +35,15 @@ class Login extends Controller {
 
 				
 				//$this->view('dashboard/index', $data_user);
-				header('Location: ' . BASEURL . '/Pengguna/index/');
+				header('Location: ' . BASEURL . '/Tacit/index/');
 			
 			} else {
-				//echo "ehy";
+				echo "Salah sandi";
+				
 				header('Location: ' . BASEURL . '/login/index');
 			}
 		} else {
-			$_SESSION['role_user'] = "SuperAdmin";
+			$_SESSION['level'] = "SuperAdmin";
 			$_SESSION['nama'] = "SuperAdmin";
 			$_SESSION["username"] = "SuperAdmin";
 

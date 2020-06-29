@@ -5,7 +5,7 @@
 }
 body{
     -webkit-font-smoothing: antialiased;
-    background: #eeeeee;
+    background: #65888d;
 }
 
 /* Table Styles */
@@ -19,12 +19,12 @@ body{
     border-radius: 5px;
     font-size: 14px;
     font-weight: normal;
-    border-bottom: 0.1px solid grey;
+    border-bottom: 0.1px solid rgb(153, 151, 151);
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: white;
+    background-color: #afb2c9;
 }
 
 .fl-table td, .fl-table th {
@@ -33,20 +33,21 @@ body{
 }
 
 .fl-table td {
-    border-right: 1px solid #f8f8f8;
+    border-right: 1px solid #71767a;
+    background: #bfcacf;
     font-size: 14px;
     word-break: break-all;
 }
 
 .fl-table thead th {
     color: #000000;
-    background: #63b1c9;
+    background: #989dcc;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #000000;
-    background: #63b1c9;
+    background: #b7bdee;
 }
 
 .fl-table tr:nth-child(even) {
@@ -54,8 +55,9 @@ body{
 }
 
 .fl-table tr:hover {
-    background: #4fd5da;
+    background: #1fb7f3;
 }
+
 
 #myTable {
     font-family: "Raleway", sans-serif;
@@ -67,19 +69,19 @@ body{
   }
   
   #myTable td, #myTable th {
-    border: 1px solid #ddd;
+    border: 1px solid #8e979b(145, 154, 160);
     padding: 8px;
   }
   
-  #myTable tr:nth-child(even){background-color: #f2f2f2;}
+  #myTable tr:nth-child(even){background-color: #848594;}
   
-  #myTable tr:hover {background-color: #4fd5da;}
+  #myTable tr:hover {background-color: #2ad44f;}
   
   #myTable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #63b1c9;
+    background-color: #97b9c7;
     color: #000000;
 }
 
@@ -92,19 +94,19 @@ body{
   }
   
 #myTable2 td, #myTable2 th {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(107, 103, 103);
     padding: 8px;
   }
   
-#myTable2 tr:nth-child(even){background-color: #f2f2f2;}
+#myTable2 tr:nth-child(even){background-color: #acbec5;}
   
-#myTable2 tr:hover {background-color: #4fd5da;}
+#myTable2 tr:hover {background-color: #19e219;}
   
 #myTable2 th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #63b1c9;
+    background-color: #3eadb1;
     color: #000000;
 }
 
@@ -121,9 +123,9 @@ body{
     padding: 8px;
   }
   
-#tblDistribusi tr:nth-child(even){background-color: #f2f2f2;}
+#tblDistribusi tr:nth-child(even){background-color: #5259b4;}
   
-#tblDistribusi tr:hover {background-color: #4fd5da;}
+#tblDistribusi tr:hover {background-color: #1dee51;}
   
 #tblDistribusi th {
     padding-top: 12px;
@@ -202,9 +204,9 @@ body{
 .judul {
     margin-top: 10px;
     width: 100%;
-    background: #109fca;
-    border: 0.5px solid #109fca;
-    color: #ffffff;
+    background: #c8caca;
+    border: 0.5px solid #6a6c6d;
+    color: #0e0d0d;
     border-radius: 3px;
     padding: 15px 10px 15px 10px;
 }
@@ -222,7 +224,7 @@ body{
 
 
 .icon-data {
-    background-color: #f01414;
+    background-color: #325c66;
   }
 
 .text-data {
@@ -241,10 +243,10 @@ body{
 .head-table {
     margin-top: 10px;
     width: 100%;
-    background: #ffffff;
+    background: #c8caca;
     border: 0.5px solid #b6b2b2;
     border-bottom: 0px;
-    color: #252525;
+    color: #141414;
     border-radius: 3px;
     padding: 15px 10px 15px 10px;
 }
@@ -273,24 +275,24 @@ pesan-masuk {
 td a:link {
 	text-decoration: none;
     display: inline-block;
-    background-color: #db2727;
-    color: #FFFFFF;
+    background-color: #4551f1;
+    color: #0a0a0a;
     padding: 5px 10px;
     transition: background .3s;
     border-radius: 4px;
 }
 td a:visited {
-	color: #FFFFFF;
+	color: #a1dff1;
 }
 td a:hover {
-	background-color: #6e2222;
+	background-color: #15d82f;
 }
 
 .navigasi a:link {
 	text-decoration: none;
     display: inline-block;
-    background-color: #db2727;
-    color: #FFFFFF;
+    background-color: #4551f1;
+    color: #0c0b0b;
     padding: 8px 10px;
     transition: background .3s;
     border-radius: 4px;
@@ -302,7 +304,7 @@ td a:hover {
 	color: #FFFFFF;
 }
 .navigasi a:hover {
-	background-color: #6e2222;
+	background-color: #65b8e9;
 }
 
 .navigasi .pencarian {
@@ -311,13 +313,13 @@ td a:hover {
 
 .judul a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #6e76df;
 }
 
 .tombol {
     display: inline-block;
-    background-color: #c0392b;
-    color: #FFFFFF;
+    background-color: #3682a0;
+    color: #2d08ff;
     padding: 10px 15px;
     transition: background .3s;
     border-radius: 4px;
@@ -326,15 +328,15 @@ td a:hover {
     margin-right: 20px;
 }
 .tombol:visited {
-	color: #FFFFFF;
+	color: #516169;
 }
 
 .tombol:hover {
-	background-color: #6e2222;
+	background-color: #5a5e97;
 }
 
 .close {
-    color: #aaaaaa;
+    color: #352f2f;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -342,7 +344,7 @@ td a:hover {
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: rgb(176, 211, 228);
     text-decoration: none;
     cursor: pointer;
   }
@@ -359,8 +361,8 @@ div .CssTambah {
 
 div .CssHapus {
     width: 30%;
-    background-color: #c0392b;
-    color: #FFFFFF;
+    background-color: #2bb6c0;
+    color: #1b1919;
     padding: 10px 15px 10px 10px;
     border-radius: 4px;
     margin-left: 10px;
@@ -380,7 +382,7 @@ div .CssUpdate {
 .update-progres {
     width: 45px;
     height: 40px;
-    background: #c0392b;
+    background: #2bb6c0;
     padding: 8px 10px 8px 10px;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
@@ -441,12 +443,12 @@ div .CssUpdate {
   }
 
   .sidebar a.compose {
-    background-color: #a70e0e;
+    background-color: #0e83a7;
     color: white; 
   }
 
   .sidebar a.penerimaObrolan {
-    background-color: #a8a7a7;
+    background-color: #128ca1;
     color: white; 
   }
   
@@ -477,8 +479,8 @@ div .CssUpdate {
 }
 
 .search-area a:hover {
-    background-color: #109fca;
-    color: white;
+    background-color: #afddeb;
+    color: rgb(14, 12, 12);
 }
 
 .grid-project {
@@ -560,8 +562,8 @@ div .CssUpdate {
 input[type=button] {
 	border: none;
 	padding: 12px 15px 12px 15px;
-	background: #e01b1b;
-	color: #fff;
+	background: #0d84bb;
+	color: rgb(17, 16, 16);
 	box-shadow: 1px 1px 4px #DADADA;
 	-moz-box-shadow: 1px 1px 4px #DADADA;
 	-webkit-box-shadow: 1px 1px 4px #DADADA;
@@ -571,7 +573,7 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-	background: #690c0c;
+	background: #e46060;
 	color: #fff;
 }
 

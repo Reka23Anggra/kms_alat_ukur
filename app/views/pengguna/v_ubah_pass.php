@@ -8,20 +8,20 @@
     <div class="navigasi">
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Pengguna/simpanPass/" method="post">
-                <input type="hidden" name="nik" value="<?= $data['data_pengguna']['nik'] ?>"/>
-                <label for="pass">
+                <input type="hidden" name="id_user" value="<?= $data['data_pengguna']['id_user'] ?>"/>
+                <label for="password">
                     <span>PASSWORD LAMA<span class="required">*</span></span>
-                    <input type="password" class="input-text" name="pass_lama" value="" required/>
+                    <input type="password" class="input-text" name="password_lama" value="" required/>
                 </label>
                 <br>
                 <br>
-                <label for="pass">
+                <label for="password">
                     <span>PASSWORD BARU<span class="required">*</span></span>
-                    <input type="password" class="input-text" name="pass_baru" value="" required/>
+                    <input type="password" class="input-text" name="password_baru" value="" required/>
                 </label>
-                <label for="pass">
+                <label for="password">
                     <span>ULANGI PASSWORD BARU<span class="required">*</span></span>
-                    <input type="password" class="input-text" name="conf_pass_baru" value="" required/>
+                    <input type="password" class="input-text" name="conf_password_baru" value="" required/>
                 </label>
                 
                 <label><span> </span><input type="submit" value="SIMPAN" /><a href="<?= BASEURL; ?>/Pengguna/detilProfile/<?= $data['data_pengguna']['nik'] ?>">KEMBALI</a></label>
