@@ -35,20 +35,20 @@ class Login extends Controller {
 
 				
 				//$this->view('dashboard/index', $data_user);
-				header('Location: ' . BASEURL . '/Tacit/index/');
+				header('Location: ' . BASEURL . '/pengguna/lihatProfile/');
 			
 			} else {
-				echo "Salah sandi";
 				
-				header('Location: ' . BASEURL . '/login/index');
+				header('Location: ' . BASEURL . '/pengguna/v_tambah_pengguna/');
 			}
-		} else {
-			$_SESSION['level'] = "SuperAdmin";
-			$_SESSION['nama'] = "SuperAdmin";
-			$_SESSION["username"] = "SuperAdmin";
-
-			header('Location: ' . BASEURL . '/Pengguna/buatAdmin');
 		}
+		//  else {
+		// 	$_SESSION['level'] = "SuperAdmin";
+		// 	$_SESSION['nama'] = "SuperAdmin";
+		// 	$_SESSION["username"] = "SuperAdmin";
+
+		// 	header('Location: ' . BASEURL . '/Pengguna/buatAdmin');
+		// }
 		
 		
 	}

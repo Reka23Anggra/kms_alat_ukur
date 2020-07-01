@@ -2,13 +2,13 @@
 
 class Pengguna extends Controller {
 	public function __construct(){
-		// if(!isset($_SESSION["username"]))  {  
-		// 	header('Location: ' . BASEURL . '/login/index');  
-		// }	
+		if(!isset($_SESSION["id_user"]))  {  
+			header('Location: ' . BASEURL . '/login/index');  
+		}	
 	}
 
     public function index() {
-		// if($_SESSION["role_user"] !== 'Admin') {
+		// if($_SESSION["level"] !== 'Admin') {
 		// 	header('Location: ' . BASEURL . '/login/index');
 		// }
 
@@ -50,7 +50,7 @@ class Pengguna extends Controller {
 		$data['judul'] = 'Buat Pengguna';
 		$data['sub_judul'] = 'Menambahkan Data Pengguna untuk pertama kali, pastikan memilih role user Admin';
 		$this->view('templates/header');
-		// $this->view('templates/sidebar', $data);
+		$this->view('templates/sidebar', $data);
 		$this->view('pengguna/v_tambah_pengguna',$data);
 		$this->view('templates/footer');
 	}

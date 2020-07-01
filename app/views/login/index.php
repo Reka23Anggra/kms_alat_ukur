@@ -32,8 +32,13 @@
             <legend id="forgot-pass">Lupa password ?</legend>
             </a> -->
             <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
-            <!-- <a href="https://t.me/HilmanAji" id="signup">Belum punya Akun ?</a> -->
-            <!-- <a href="<?= BASEURL;?>" id="signup">Kembali ke beranda</a> -->
+
+            <!-- <a href="<?= BASEURL; ?>/Pengguna/tambahData/">Daftar Akun</a> -->
+
+            <!-- <td>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+            </td> -->
         </form>
         </div>
     </div>

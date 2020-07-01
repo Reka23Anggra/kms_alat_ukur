@@ -51,11 +51,11 @@ class DataHandle {
     }
 
     public function cekDataLogin($data){
-        $query = "SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password";
+        $query = "SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password ";
 
         $this->db->query($query);
         $this->db->bind('id_user', $data['id_user']);
-		$this->db->bind('password', $data['password']);
+        $this->db->bind('password', $data['password']);     
 
         $this->db->execute();
 
@@ -66,6 +66,7 @@ class DataHandle {
         $this->db->query('SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password');
         $this->db->bind('id_user', $data['id_user']);
         $this->db->bind('password', $data['password']);
+        
         
         return $this->db->single(); 
     }
@@ -303,5 +304,35 @@ class DataHandle {
          $this->db->bind('id_perawatan_alat', $id);
 
          return $this->db->single();
+    }
+    public function getBerkas() {
+        $this->db->query('SELECT
+        tbl_modul.id_modul,
+        tbl_eksplisit.id_eksplisit,
+        tbl_eksplisit.nm_alat,
+        tbl_modul.modul
+        FROM
+        tbl_modul ,
+        tbl_eksplisit
+        WHERE
+        tbl_modul.id_modul = tbl_modul.id_modul and tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit and tbl_eksplisit.nm_alat = tbl_eksplisit.nm_alat and tbl_modul.modul = tbl_modul.modul');
+        return $this->db->resultSet();
+    }
+
+
+
+    public function tambahDataBerkas($data)
+    {
+        $query = "INSERT INTO tbl_modul VALUES ( :id_modul, :id_eksplisit, :nm_alat, :modul)";
+
+        $this->db->query($query);
+        $this->db->bind('id_modul', $data['id_modul']);
+        $this->db->bind('id_eksplisit', $data['id_eksplisit']);
+        $this->db->bind('nm_alat', $data['nm_alat']);
+        $this->db->bind('modul', $data['modul']);        
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
     }
 }

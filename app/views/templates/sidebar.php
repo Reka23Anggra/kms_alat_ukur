@@ -1,20 +1,20 @@
 <section id="sideMenu">
     <button class="closebtn" onclick="closeNav()"><</button>
     <div class="logo-app">
-        <img src="<?= BASEURL;?>/img/logo2.png" alt="" width="170" heigth="150">
+        <img src="<?= BASEURL;?>/img/logonew.png" alt="" width="170" heigth="150">
     </div>
     <nav>
         <?php
         $halaman = $data['judul'];
         
         if ($_SESSION["level"] == 'Admin' || 'admin') { ?>
-            <a href="<?= BASEURL;?>/Pengguna/lihatProfile/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/edituser.png" alt="" width="20" heigth="20">&nbsp Profil</a>
-            <a href="<?= BASEURL;?>/Tacit/index" <?php if($halaman == "Tacit") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/users.png" alt="" width="20" heigth="20">&nbsp Kelola Tacit</a>
-            <a href="<?= BASEURL;?>/Eksplisit/index" <?php if($halaman == "Eksplisit") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/buku2.png" alt="" width="30" heigth="30">&nbsp Kelola Eksplisit</a>
-            <a href="<?= BASEURL;?>/Perawatan/index" <?php if($halaman == "Perawatan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/rawat2.png" alt="" width="30" heigth="30">&nbsp Perawatan Alat Ukur</a>
-            <a href="<?= BASEURL;?>/Pengguna/index" <?php if($halaman == "Data User") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/obrolan.png" alt="" width="30" heigth="30">&nbsp Kelola User</a>
-            <a href="<?= BASEURL;?>/berkas/index/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/modul.png" alt="" width="20" heigth="20">&nbsp Modul Pengetahuan</a>
-            <a href="<?= BASEURL;?>/cetak/index/<?= $_SESSION['level'] ?>" <?php if($halaman == "Laporan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/modul.png" alt="" width="20" heigth="20">&nbsp Cetak Perawatan</a>                  
+            <a href="<?= BASEURL;?>/Pengguna/lihatProfile/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/profil.png" alt="" width="40" heigth="40">&nbsp Profil</a>
+            <a href="<?= BASEURL;?>/Tacit/index" <?php if($halaman == "Tacit") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/pakar.png" alt="" width="40" heigth="40">&nbsp Kelola Tacit</a>
+            <a href="<?= BASEURL;?>/Eksplisit/index" <?php if($halaman == "Eksplisit") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/jurnal.png" alt="" width="40" heigth="40">&nbsp Kelola Eksplisit</a>
+            <a href="<?= BASEURL;?>/Perawatan/index" <?php if($halaman == "Perawatan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/rawat4.png" alt="" width="30" heigth="30">&nbsp Perawatan Alat Ukur</a>
+            <a href="<?= BASEURL;?>/Pengguna/index" <?php if($halaman == "Data User") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/obrolan.png" alt="" width="40" heigth="40">&nbsp Kelola User</a>
+            <a href="<?= BASEURL;?>/berkas/index/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/ebook.png" alt="" width="40" heigth="40">&nbsp Modul Pengetahuan</a>
+            <a href="<?= BASEURL;?>/cetak/index/<?= $_SESSION['level'] ?>" <?php if($halaman == "Laporan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/cetak3.png" alt="" width="40" heigth="40">&nbsp Cetak Perawatan</a>                  
         <?php }
         
         else if($_SESSION["level"] == 'Pakar' || 'pakar'){ ?>

@@ -21,33 +21,42 @@ body{
     font-weight: normal;
     border-bottom: 0.1px solid rgb(153, 151, 151);
     border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
+    width: 20%;
+    max-width: 20%;
     white-space: nowrap;
-    background-color: #afb2c9;
+    background-color: #9bd2da;
+    word-wrap: break-word;
+
 }
 
 .fl-table td, .fl-table th {
-    text-align: center;
+    text-align: justify;
     padding: 8px;
+    width: 40px;
+    word-wrap: break-word;
 }
 
 .fl-table td {
     border-right: 1px solid #71767a;
     background: #bfcacf;
     font-size: 14px;
-    word-break: break-all;
+    padding: 8px;
+    width: 30px;
+    word-wrap: break-word;
 }
 
 .fl-table thead th {
     color: #000000;
     background: #989dcc;
+    padding: 8px;
+    width: 400px;
+    word-wrap: break-word;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #000000;
-    background: #b7bdee;
+    background: #989dcc;
 }
 
 .fl-table tr:nth-child(even) {
@@ -65,12 +74,16 @@ body{
     border-collapse: collapse;
     font-size: 14px;
     font-weight: normal;
-    width: 100%;
+    width: 400px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
   }
   
   #myTable td, #myTable th {
-    border: 1px solid #8e979b(145, 154, 160);
-    padding: 8px;
+    border: 1px solid #9bdfdf(145, 154, 160);
+    padding: 30px;
+    width: 100px;
+    word-wrap: break-word;
   }
   
   #myTable tr:nth-child(even){background-color: #848594;}
@@ -81,8 +94,9 @@ body{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #97b9c7;
+    background-color: #8fd6d3;
     color: #000000;
+
 }
 
 #myTable2 {
@@ -91,6 +105,7 @@ body{
     font-size: 14px;
     font-weight: normal;
     width: 100%;
+    word-wrap: break-word;
   }
   
 #myTable2 td, #myTable2 th {
@@ -123,7 +138,7 @@ body{
     padding: 8px;
   }
   
-#tblDistribusi tr:nth-child(even){background-color: #5259b4;}
+#tblDistribusi tr:nth-child(even){background-color: #7b81d3;}
   
 #tblDistribusi tr:hover {background-color: #1dee51;}
   
@@ -292,7 +307,7 @@ td a:hover {
 	text-decoration: none;
     display: inline-block;
     background-color: #4551f1;
-    color: #0c0b0b;
+    color: #e7e1e1;
     padding: 8px 10px;
     transition: background .3s;
     border-radius: 4px;
@@ -301,10 +316,11 @@ td a:hover {
     margin-right: 20px;
 }
 .navigasi a:visited {
-	color: #FFFFFF;
+	color: #b6dee5;
 }
 .navigasi a:hover {
-	background-color: #65b8e9;
+    background-color: #15d82f;
+    color: #0a0a0a;
 }
 
 .navigasi .pencarian {
@@ -332,7 +348,7 @@ td a:hover {
 }
 
 .tombol:hover {
-	background-color: #5a5e97;
+	background-color: #15d82f;
 }
 
 .close {
@@ -389,7 +405,7 @@ div .CssUpdate {
 }
 
 .update-progres:hover {
-    background: #6b1c13;
+    background: #15d82f;
 }
 
 /* Style untuk Sidebar Menu Pesan */

@@ -30,8 +30,9 @@ body {
 }
 
 #sideMenu a:hover {
-    background: #4c6d6e;
-    border-left: 5px solid #0cd327;
+    background: #608788;
+    border-left: 10px solid #0cd327;
+    border-right: 10px solid #0cd327;
     padding: 15px 30px 15px 25px;
     color: #f9fcee;
 }
@@ -39,6 +40,7 @@ body {
 #sideMenu a.active {
     background: #7e8f91;
     border-left: 5px solid #2bc03f;
+    border-right: 15px solid #0cd327;
     padding: 15px 30px 15px 25px;
     color: #141618;
 }
@@ -64,7 +66,7 @@ div.logo-app {
 header {
     margin-left: 0;
     padding: 12px;
-    background: rgb(103, 169, 180);
+    background: #719aad;
     box-shadow: 0px 3px 5px grey;
     transition: margin-left .5s;
 }

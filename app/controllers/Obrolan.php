@@ -36,11 +36,11 @@ class Obrolan extends Controller {
 		}
     }
 
-    public function getUbah($id){
-		// if($level == 'Pegawai' || $level == 'pegawai') {
-		// 	header('Location: ' . BASEURL . '/obrolan/index');
-		// 	Flasher::setFlash('User dengan level Pegawai','tidak dapat Mutakhir','CssHapus');
-		// } else {
+    public function getUbah($id, $table){
+		if($level == 'Pegawai' || $level == 'pegawai') {
+			header('Location: ' . BASEURL . '/obrolan/index');
+			Flasher::setFlash('User dengan level Pegawai','tidak dapat Mutakhir','CssHapus');
+		} else {
 			$data['judul'] = 'Ubah Pertanyaan';
 			$data['sub_judul'] = 'Ubah Pertanyaan';
 
@@ -49,7 +49,7 @@ class Obrolan extends Controller {
 			$this->view('templates/sidebar', $data);
 			$this->view('obrolan/v_ubah_chat', $data);
 			$this->view('templates/footer');
-		// }
+		 }
 		
     }
     
