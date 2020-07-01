@@ -9,7 +9,7 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Pengguna/ubahData/" method="post">
                 <label for="id_user">
-                    <span>Id User<span class="required">*</span></span>
+                    <span>NIK<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_user" value="<?= $data['data_pengguna']['id_user'] ?>" disable required/>
                 </label>
                 <label for="nama">
@@ -17,6 +17,14 @@
                     <input type="text" class="input-text" name="nama" value="<?= $data['data_pengguna']['nama'] ?>" required/>
                 </label>
                 <label for="level">
+                <label for="jk">
+                    <span>Jenis Kelamin</span>
+                    <select name="jk" class="select-field">
+                        <option value="">>>Pilih Jenis Kelamin<<</option>
+                        <option value="L">Laki - laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                </label>
                     <span>Level USER</span>
                     <select name="level" class="select-field">
                         <option value="<?= $data['data_pengguna']['level'] ?>"><?= $data['data_pengguna']['level'] ?></option>
@@ -29,10 +37,10 @@
                     <span>USERNAME<span class="required">*</span></span>
                     <input type="text" class="input-text" name="username" value="<?= $data['data_pengguna']['username'] ?>" required/>
                 </label>
-                <label for="password">
-                    <span>Password<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="password" value="<?= $data['data_pengguna']['password'] ?>" required/>
-                </label>
+                <!-- <label for="password">
+                    <span>Password<span class="required">*</span></span> -->
+                    <input type="hidden" class="input-text" name="password" value="<?= $data['data_pengguna']['password'] ?>"/>
+                <!-- </label> -->
                 <label for="no_hp">
                     <span>Ho Hansphone<span class="required">*</span></span>
                     <input type="number" class="input-text" name="no_hp" value="<?= $data['data_pengguna']['no_hp'] ?>" required/>
@@ -42,7 +50,7 @@
                     <input type="text" class="input-text" name="email" value="<?= $data['data_pengguna']['email'] ?>" required/>
                 </label>
                 
-                <label><span> </span><input type="submit" value="SIMPAN" ><a href="<?= BASEURL; ?>/Pengguna/resetPass/<?= $data['data_pengguna']['id_user'] ?>">RESET PASSWORD</a><a href="<?= BASEURL; ?>/Pengguna/index">KEMBALI</a></label>
+                <label><span> </span><input type="submit" value="SIMPAN" ><a href="<?= BASEURL; ?>/Pengguna/index">KEMBALI</a></label>
                 
             </form>
         </div>

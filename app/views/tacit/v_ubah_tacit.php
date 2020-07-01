@@ -12,14 +12,14 @@
                     <span>Id Tacit<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_tacit" value="<?= $data['data_tacit']['id_tacit'] ?>" disable required/>
                 </label>
-                <label for="id_user">
-                    <span>Id User<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="id_user" value="<?= $data['data_tacit']['id_user'] ?>" disable required/>
-                </label>
+                <!-- <label for="id_user">
+                    <span>NIK<span class="required">*</span></span> -->
+                    <input type="hidden" class="input-text" name="id_user" value="<?= $_SESSION['id_user']; ?>" />
+                <!-- </label>
                 <label for="nama">
-                    <span>Nama Lengkap<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="nama" value="<?= $data['data_tacit']['nama'] ?>" required/>
-                </label>
+                    <span>Nama Lengkap<span class="required">*</span></span> -->
+                    <input type="hidden" class="input-text" name="nama" value="<?= $_SESSION['nama']; ?>" />
+                <!-- </label> -->
                 <label for="nm_alat">
                     <span>Nama Alat<span class="required">*</span></span>
                     <input type="text" class="input-text" name="nm_alat" value="<?= $data['data_tacit']['nm_alat'] ?>" required/>

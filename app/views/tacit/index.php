@@ -23,7 +23,7 @@
             <tr>
                 <th>No</th>
                 <th>Id Tacit</th>
-                <th>Id User</th>
+                <th>NIK</th>
                 <th>Nama</th>
                 <th>Nama Alat</th>
                 <th>Fungsi Alat</th>

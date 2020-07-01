@@ -2,8 +2,7 @@ a {
   text-decoration: none;
 }
 body {
-  background-image: url("http://localhost/desainospfo/public/img/bg.png");
-  background-repeat: no-repeat;
+ background: #6b7279;
   background-size: cover;
 
 /* background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
@@ -12,7 +11,7 @@ background-repeat: no-repeat; */
 }
 label {
   font-family: "Raleway", sans-serif;
-  font-size: 11pt;
+  font-size: 13pt;
 }
 #forgot-pass {
   color: #1982e4;
@@ -22,7 +21,7 @@ label {
   text-align: right;
 }
 #card {
-  background: #fbfbfb;
+  background: #92b8be;
   border-radius: 8px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   height: 495px;
@@ -30,7 +29,7 @@ label {
   width: 329px;
 }
 #card-content {
-  padding: 12px 44px;
+  padding: 12px 34px;
 }
 #card-title {
   font-family: "Raleway", sans-serif;
@@ -47,22 +46,22 @@ label {
   text-align: center;
 }
 #submit-btn {
-  background: -webkit-linear-gradient(right, #1982e4, #db2727);
+  background: #3091ec;
   border: none;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px #db2727;
+  box-shadow: 0px 1px 8px #8bc71b;
   cursor: pointer;
-  color: white;
+  color: rgb(20, 20, 20);
   font-family: "Raleway SemiBold", sans-serif;
-  height: 42.3px;
+  height: 33px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 25px;
   transition: 0.25s;
-  width: 153px;
+  width: 143px;
 }
 
 #submit-btn:hover {
-  box-shadow: 0px 1px 18px #db2727;
+  box-shadow: 0px 1px 18px #33e93c;
 }
 
 .form {
@@ -71,7 +70,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: -webkit-linear-gradient(right, #1982e4, #db2727);
+  background: -webkit-linear-gradient(right, #1982e4, #1982e4);
   height: 1px;
   width: 100%;
 }
@@ -83,7 +82,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: -webkit-linear-gradient(right, #1982e4, #db2727);
+  background: -webkit-linear-gradient(right, #1982e4, #1982e4);
   height: 2px;
   margin: -1.1rem auto 0 auto;
   width: 89px;

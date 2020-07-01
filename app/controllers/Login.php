@@ -9,7 +9,7 @@ class Login extends Controller {
 
 
 		$idUser = $_POST["id_user"];
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 		
 		// GET DATA USER
 		$post = array(
@@ -35,19 +35,20 @@ class Login extends Controller {
 
 				
 				//$this->view('dashboard/index', $data_user);
-				header('Location: ' . BASEURL . '/Pengguna/index/');
+				header('Location: ' . BASEURL . '/pengguna/lihatProfile/');
 			
 			} else {
-				//echo "ehy";
-				header('Location: ' . BASEURL . '/login/index');
+				
+				header('Location: ' . BASEURL . '/pengguna/v_tambah_pengguna/');
 			}
-		} else {
-			$_SESSION['role_user'] = "SuperAdmin";
-			$_SESSION['nama'] = "SuperAdmin";
-			$_SESSION["username"] = "SuperAdmin";
-
-			header('Location: ' . BASEURL . '/Pengguna/buatAdmin');
 		}
+		//  else {
+		// 	$_SESSION['level'] = "SuperAdmin";
+		// 	$_SESSION['nama'] = "SuperAdmin";
+		// 	$_SESSION["username"] = "SuperAdmin";
+
+		// 	header('Location: ' . BASEURL . '/Pengguna/buatAdmin');
+		// }
 		
 		
 	}

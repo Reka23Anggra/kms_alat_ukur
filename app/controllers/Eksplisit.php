@@ -54,7 +54,6 @@ class Eksplisit extends Controller {
     }
     
     public function ubahData() {
-		// var_dump($_POST);
 
 		if( $this->model('DataHandle')->ubahDataEksplisit($_POST) > 0) {
 		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');

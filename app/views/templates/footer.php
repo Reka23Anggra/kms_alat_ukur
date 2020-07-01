@@ -1,6 +1,6 @@
 </section>
 <footer id="foot-area">
-    <p>&copy 2020 PT. Telkom Akses | Knowledge Management System Outside Plant Fiber Optic | STMIK Kharisma Karawang</p>
+    <p>@2020 Knowledge Management System Perawatan Alat Ukur | STMIK Kharisma Karawang</p>
 </footer>
 <script>
 

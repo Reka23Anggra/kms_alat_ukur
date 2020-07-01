@@ -14,13 +14,13 @@
     <div id="card">
         <div id="card-content">
         <div id="card-title">
-            <img src="<?= BASEURL;?>/img/logo-baru.png" alt="" width="150" heigth="150">
-            <h2>LOGIN</h2>
+            <img src="<?= BASEURL;?>/img/dntikms.png" alt="" width="170" heigth="170">
+            
             <div class="underline-title"></div>
         </div>
         <form method="post" class="form" action="<?= BASEURL; ?>/login/cekLogin/">
             <label for="user-email" style="padding-top:13px">
-                &nbsp;Username
+                &nbsp;NIK
             </label>
             <input id="user-email" class="form-content" type="text" name="id_user" autocomplete="on" required />
             <div class="form-border"></div>
@@ -28,12 +28,17 @@
             </label>
             <input id="user-password" class="form-content" type="password" name="password" required />
             <div class="form-border"></div>
-            <a href="#">
+            <!-- <a href="#">
             <legend id="forgot-pass">Lupa password ?</legend>
-            </a>
+            </a> -->
             <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
-            <a href="https://t.me/HilmanAji" id="signup">Belum punya Akun ?</a>
-            <a href="<?= BASEURL;?>" id="signup">Kembali ke beranda</a>
+
+            <!-- <a href="<?= BASEURL; ?>/Pengguna/tambahData/">Daftar Akun</a> -->
+
+            <!-- <td>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+            </td> -->
         </form>
         </div>
     </div>

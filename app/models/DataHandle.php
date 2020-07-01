@@ -51,11 +51,11 @@ class DataHandle {
     }
 
     public function cekDataLogin($data){
-        $query = "SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password";
+        $query = "SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password ";
 
         $this->db->query($query);
         $this->db->bind('id_user', $data['id_user']);
-		$this->db->bind('password', $data['password']);
+        $this->db->bind('password', $data['password']);     
 
         $this->db->execute();
 
@@ -65,7 +65,8 @@ class DataHandle {
     public function getDataLogin($data){
         $this->db->query('SELECT * FROM tbl_user WHERE id_user = :id_user AND password = :password');
         $this->db->bind('id_user', $data['id_user']);
-		$this->db->bind('password', $data['password']);
+        $this->db->bind('password', $data['password']);
+        
         
         return $this->db->single(); 
     }
@@ -88,14 +89,15 @@ class DataHandle {
 
     // Spesifik Query Pengguna
     public function tambahDataPengguna($data) {
-        $query = "INSERT INTO tbl_user VALUES (:id_user, :nama, :level, :username, :password, :no_hp, :email)";
+        $query = "INSERT INTO tbl_user VALUES (:id_user, :nama, :jk, :level, :username, :password, :no_hp, :email)";
 
         $this->db->query($query);
         $this->db->bind('id_user', $data['id_user']);
         $this->db->bind('nama', $data['nama']);
+        $this->db->bind('jk', $data['jk']);
         $this->db->bind('level', $data['level']);
         $this->db->bind('username', $data['username']);
-        $this->db->bind('password', $data['password']);
+        $this->db->bind('password', md5($data['password']));
         $this->db->bind('no_hp', $data['no_hp']);
         $this->db->bind('email', $data['email']);
 
@@ -105,14 +107,17 @@ class DataHandle {
     }
 
     public function ubahDataPengguna($data) {
-        $query = "UPDATE tbl_user SET id_user = :id_user, nama = :nama, level = :level, username = :username, password = :password,  no_hp = :no_hp, email = :email WHERE id_user = :id_user";
+        //var_dump($data);
+
+        $query = "UPDATE tbl_user SET id_user = :id_user, nama = :nama, jk = :jk, level = :level, username = :username, password = :password,  no_hp = :no_hp, email = :email WHERE id_user = :id_user";
         
         $this->db->query($query);
         $this->db->bind('id_user', $data['id_user']);
         $this->db->bind('nama', $data['nama']);
+        $this->db->bind('jk', $data['jk']);
         $this->db->bind('level', $data['level']);
         $this->db->bind('username', $data['username']);
-        $this->db->bind('password', $data['password']);
+        $this->db->bind('password', md5($data['password']));
         $this->db->bind('no_hp', $data['no_hp']);
         $this->db->bind('email', $data['email']);
 
@@ -123,11 +128,11 @@ class DataHandle {
     }
 
     public function ubahPassword($data) {
-        $query = "UPDATE tbl_pengguna SET pass = :pass WHERE nik = :nik";
+        $query = "UPDATE tbl_user SET password = :password WHERE id_user = :id_user";
         
         $this->db->query($query);
-        $this->db->bind('nik', $data['nik']);
-        $this->db->bind('pass',$data['pass_baru']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('password',$data['password_baru']);
 
         $this->db->execute();
 
@@ -224,4 +229,110 @@ class DataHandle {
         return $this->db->rowCount();
     }
 
+    public function tambahDataChat($data)
+    {
+        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level)";
+
+        $this->db->query($query);
+        $this->db->bind('id_chat', $data['id_chat']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('chat', $data['chat']);
+        $this->db->bind('level', $data['level']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+
+    }
+
+    public function ubahDataChat($data)
+    {
+        $query = "UPDATE obrolan SET id_chat = :id_chat, id_user = :id_user, nama = :nama, chat = :chat,  level = :level WHERE id_chat = :id_chat";
+
+        $this->db->query($query);
+        $this->db->bind('id_chat', $data['id_chat']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('chat', $data['chat']);
+        $this->db->bind('level', $data['level']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+
+    public function getCetak() {
+        $this->db->query('SELECT
+        tbl_perawatan.id_perawatan_alat,
+        tbl_tacit.nm_alat,
+        tbl_tacit.id_tacit,
+        tbl_eksplisit.id_eksplisit,
+        tbl_tacit.fungsi,
+        tbl_tacit.penggunaan_alat,
+        tbl_tacit.perawatan_alat,
+        tbl_eksplisit.perawatan_alat,
+        tbl_tacit.satuan
+        FROM
+        tbl_perawatan ,
+        tbl_tacit,
+        tbl_eksplisit
+        WHERE
+        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit ');
+        return $this->db->resultSet();
+    }
+
+    public function getCetakById($id, $table) {
+        $this->db->query('SELECT
+        tbl_perawatan.id_perawatan_alat,
+        tbl_tacit.nm_alat,
+        tbl_tacit.id_tacit,
+        tbl_eksplisit.id_eksplisit,
+        tbl_tacit.fungsi,
+        tbl_tacit.penggunaan_alat,
+        tbl_tacit.perawatan_alat,
+        tbl_eksplisit.perawatan_alat,
+        tbl_tacit.satuan
+        FROM
+        tbl_perawatan ,
+        tbl_tacit,
+        tbl_eksplisit
+        WHERE
+        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit');
+         
+         $this->db->bind('id_perawatan_alat', $id);
+
+         return $this->db->single();
+    }
+    public function getBerkas() {
+        $this->db->query('SELECT
+        tbl_modul.id_modul,
+        tbl_eksplisit.id_eksplisit,
+        tbl_eksplisit.nm_alat,
+        tbl_modul.modul
+        FROM
+        tbl_modul ,
+        tbl_eksplisit
+        WHERE
+        tbl_modul.id_modul = tbl_modul.id_modul and tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit and tbl_eksplisit.nm_alat = tbl_eksplisit.nm_alat and tbl_modul.modul = tbl_modul.modul');
+        return $this->db->resultSet();
+    }
+
+
+
+    public function tambahDataBerkas($data)
+    {
+        $query = "INSERT INTO tbl_modul VALUES ( :id_modul, :id_eksplisit, :nm_alat, :modul)";
+
+        $this->db->query($query);
+        $this->db->bind('id_modul', $data['id_modul']);
+        $this->db->bind('id_eksplisit', $data['id_eksplisit']);
+        $this->db->bind('nm_alat', $data['nm_alat']);
+        $this->db->bind('modul', $data['modul']);        
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }
