@@ -14,7 +14,7 @@
     <div id="card">
         <div id="card-content">
         <div id="card-title">
-            <img src="<?= BASEURL;?>/img/dntikms.png" alt="" width="170" heigth="170">
+            <img src="<?= BASEURL;?>/img/dntikms.png" alt="" width="230" heigth="230">
             
             <div class="underline-title"></div>
         </div>
@@ -22,11 +22,11 @@
             <label for="user-email" style="padding-top:13px">
                 &nbsp;NIK
             </label>
-            <input id="user-email" class="form-content" type="text" name="id_user" autocomplete="on" required />
+            <input id="user-email" class="form-content" type="text" name="id_user" autocomplete="on" placeholder="Masukan NIK" required />
             <div class="form-border"></div>
             <label for="user-password" style="padding-top:22px">&nbsp;Password
             </label>
-            <input id="user-password" class="form-content" type="password" name="password" required />
+            <input id="user-password" class="form-content" type="password" name="password" placeholder="Masukan password" required />
             <div class="form-border"></div>
             <!-- <a href="#">
             <legend id="forgot-pass">Lupa password ?</legend>

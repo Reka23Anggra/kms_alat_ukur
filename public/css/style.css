@@ -5,7 +5,7 @@
 }
 body{
     -webkit-font-smoothing: antialiased;
-    background: #65888d;
+    background: #8a9597;
 }
 
 /* Table Styles */
@@ -13,13 +13,14 @@ body{
 .table-wrapper{
     margin: 10px 10px 10px;
     box-shadow: 0px 15px 15px #00000033;
+   
 }
 
 .fl-table {
     border-radius: 5px;
     font-size: 14px;
     font-weight: normal;
-    border-bottom: 0.1px solid rgb(153, 151, 151);
+    border-bottom: 0.1px solid rgb(209, 185, 185);
     border-collapse: collapse;
     width: 20%;
     max-width: 20%;
@@ -30,24 +31,30 @@ body{
 }
 
 .fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+    width: 60px;
+    word-wrap: break-word;
+}
+
+.f4-table td, .f4-table th {
     text-align: justify;
     padding: 8px;
     width: 40px;
     word-wrap: break-word;
 }
-
 .fl-table td {
-    border-right: 1px solid #71767a;
+    border-right: 1px solid #97b0b6;
     background: #bfcacf;
     font-size: 14px;
     padding: 8px;
-    width: 30px;
+    width: 60px;
     word-wrap: break-word;
 }
 
 .fl-table thead th {
     color: #000000;
-    background: #989dcc;
+    background: #18bedb;
     padding: 8px;
     width: 400px;
     word-wrap: break-word;
@@ -64,7 +71,7 @@ body{
 }
 
 .fl-table tr:hover {
-    background: #1fb7f3;
+    background: #1f8df3;
 }
 
 
@@ -86,9 +93,9 @@ body{
     word-wrap: break-word;
   }
   
-  #myTable tr:nth-child(even){background-color: #848594;}
+  #myTable tr:nth-child(even){background-color: #969c9c;}
   
-  #myTable tr:hover {background-color: #2ad44f;}
+  #myTable tr:hover {background-color: #b0c2b3;}
   
   #myTable th {
     padding-top: 12px;
@@ -109,13 +116,13 @@ body{
   }
   
 #myTable2 td, #myTable2 th {
-    border: 1px solid rgb(107, 103, 103);
+    border: 1px solid rgb(131, 144, 150);
     padding: 8px;
   }
   
-#myTable2 tr:nth-child(even){background-color: #acbec5;}
+#myTable2 tr:nth-child(even){background-color: #7b81d3;}
   
-#myTable2 tr:hover {background-color: #19e219;}
+#myTable2 tr:hover {background-color: #5adb7a;}
   
 #myTable2 th {
     padding-top: 12px;
@@ -140,7 +147,7 @@ body{
   
 #tblDistribusi tr:nth-child(even){background-color: #7b81d3;}
   
-#tblDistribusi tr:hover {background-color: #1dee51;}
+#tblDistribusi tr:hover {background-color: #4ef048;}
   
 #tblDistribusi th {
     padding-top: 12px;
@@ -300,7 +307,7 @@ td a:visited {
 	color: #a1dff1;
 }
 td a:hover {
-	background-color: #15d82f;
+	background-color: #33e442;
 }
 
 .navigasi a:link {
@@ -335,7 +342,7 @@ td a:hover {
 .tombol {
     display: inline-block;
     background-color: #3682a0;
-    color: #2d08ff;
+    color: #e7e1e1;
     padding: 10px 15px;
     transition: background .3s;
     border-radius: 4px;
@@ -348,7 +355,7 @@ td a:hover {
 }
 
 .tombol:hover {
-	background-color: #15d82f;
+	background-color: #15d83f;
 }
 
 .close {

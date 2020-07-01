@@ -18,7 +18,7 @@
     </div>
     <!-- ini bagian judul -->
     <div class="table-wrapper">
-        <table id="myTable" class="fl-table">
+        <table id="myTable" class="f1-table">
             <thead>
             <tr>
                 <th>No</th>
@@ -49,8 +49,8 @@
                 <td><?= $pengguna['no_hp'] ?></td>
                 <td><?= $pengguna['email'] ?></td>
                 <td>
-                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
-                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="22" heigth="22"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="19" heigth="19"></a>
                 </td>
             </tr>
             <?php endforeach; ?>
