@@ -39,11 +39,11 @@
                 <td><?= $modul['id_modul'] ?></td>
                 <td><?= $modul['id_eksplisit'] ?></td>
                 <td><?= $modul['nm_alat'] ?></td>
+                <td><?= $modul['modul'] ?></td>
                 <td>
-                <a title="Upload Data" href="<?= BASEURL; ?>/files/<?= $prg['modul'] ?>" target="_blank">FILE</a>
+                <a href="<?= BASEURL; ?>/Berkas/getDetil/<?= $berkas['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/lihat.png" alt=""  width="25" heigth="25"></a>
                 </td>
-                <td>
-                <a href="<?= BASEURL; ?>/Berkas/tambahBerkas/<?= $prg['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
+                    <!-- <a href="<?= BASEURL; ?>/Berkas/tambahBerkas/<?= $prg['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/berkas.png" alt=""  width="19" heigth="19"></a> -->
             </tr>
             <?php endforeach; ?>
             <tbody>

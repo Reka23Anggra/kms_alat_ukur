@@ -8,9 +8,9 @@ class Cetak extends Controller {
         if ($_SESSION["level"] == 'Admin') {
 			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
 
-		}else {
-			$id_user = $_SESSION['id_user'];
-			$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
+		// }else {
+		// 	$id_user = $_SESSION['id_user'];
+		// 	$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
 		}
         
 		$this->view('templates/header', $data);
@@ -27,11 +27,12 @@ class Cetak extends Controller {
         if ($_SESSION["level"] == 'Admin') {
 			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
 
-		}else {
-			$id_user = $_SESSION['id_user'];
-			$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
-		}
+		// }else {
+		// 	$id_user = $_SESSION['id_user'];
+		// 	$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
+		// }
         $this->view('cetak/v_cetak', $data);
     }
     
+}
 }

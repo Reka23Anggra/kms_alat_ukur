@@ -8,7 +8,7 @@
 <div class="data-table">
     <div class="navigasi">
         <div class="gaya-form">
-            <form action="<?= BASEURL; ?>/Berkas/tambahBerkas/" method="post">
+            <form action="<?= BASEURL; ?>/Berkas/tambahBerkas/" method="post" enctype="multipart/form-data">
                 <label for="id_modul">
                     <span>Id Modul<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_modul" value="" required/>
