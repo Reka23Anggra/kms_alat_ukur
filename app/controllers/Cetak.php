@@ -6,11 +6,19 @@ class Cetak extends Controller {
         $data['cetak_data'] = $this->model('DataHandle')->getCetak();
         
         if ($_SESSION["level"] == 'Admin') {
+			
 			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
-
+		}
+			elseif ($_SESSION["level"] == 'Pegawai') {
+				$data['cetak_data'] = $this->model('DataHandle')->getCetak();
 		// }else {
 		// 	$id_user = $_SESSION['id_user'];
 		// 	$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
+		$this->view('templates/header', $data);
+		$this->view('templates/sidebar', $data);
+		$this->view('cetak/v_lihat_berkas', $data);
+		$this->view('templates/footer');
+	
 		}
         
 		$this->view('templates/header', $data);
