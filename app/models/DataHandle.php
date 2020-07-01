@@ -206,7 +206,7 @@ class DataHandle {
 
     public function ubahDataEksplisit($data)
     {
-        $query = "UPDATE tbl_eksplisit SET id_eksplisit = :id_eksplisit, kd_buku = :kd_buku, nm_alat = :nm_alat, fungsi = :fungsi,  penggunaan_alat = :penggunaan_alat, perawatan_alat = :perawatan_alat, satuan = :satuan, thn_terbit = :thn_terbit, penulis = :penulis WHERE tbl_eksplisit = :tbl_eksplisit";
+        $query = "UPDATE tbl_eksplisit SET id_eksplisit = :id_eksplisit, kd_buku = :kd_buku, nm_alat = :nm_alat, fungsi = :fungsi,  penggunaan_alat = :penggunaan_alat, perawatan_alat = :perawatan_alat, satuan = :satuan, thn_terbit = :thn_terbit, penulis = :penulis WHERE id_eksplisit = :id_eksplisit";
 
         $this->db->query($query);
         $this->db->bind('id_eksplisit', $data['id_eksplisit']);
