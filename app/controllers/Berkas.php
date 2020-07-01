@@ -1,10 +1,17 @@
 <?php
 
 class Berkas extends Controller {
-   public function index(){
+	public function __construct(){
+		if(!isset($_SESSION["id_user"]))  {  
+			header('Location: ' . BASEURL . '/login/index');  
+		}	
+	}
+
+   public function index($id_user){
         $data['judul'] = 'Modul Pengetahuan Eksplisit';
 		$data['sub_judul'] = 'Modul Pengetahuan';
-		$data['data_berkas'] = $this->model('DataHandle')->getBerkas($table = 'tbl_modul');
+		$data['data_berkas'] = $this->model('DataHandle')->getAll($table = 'tbl_modul');
+		$data['data_berkas'] = $this->model('DataHandle')->getAllById($table='tbl_modul', $id_table='id_', $id=$nik);
 		
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
@@ -31,23 +38,24 @@ class Berkas extends Controller {
 		
 		
 		$ekstensi_benar	= array('pdf');
-		$nama = $_FILES['modul']['name'];
-		$x = explode('.', $nama);
+		$file = $_FILES['modul']['name'];
+		$x = explode('.', $file);
 		$ekstensi = strtolower(end($x));
 		$ukuran	= $_FILES['modul']['size'];
 		$file_tmp = $_FILES['modul']['tmp_name'];
 		if (in_array($ekstensi, $ekstensi_benar) === true){
 			if ($ukuran < 1044070){
-				$nama = md5($nama);
-				move_uploaded_file($file_tmp, 'files/'.$nama);
+				$file = md5($file);
+				move_uploaded_file($file_tmp, 'files/'.$file);
 
 				$data = array(
 					'id_modul' => $id_modul,
 					'id_eksplisit' => $id_eksplisit,
 					'nm_alat' => $nm_alat,
-					'modul' => $nama,
+					'modul' => $file,
 					
-				 );
+                 );
+                 //var_dump($_POST);
 
 				if ( $this->model('DataHandle')->tambahDataBerkas($data) > 0) {
 					Flasher::setFlash('Berhasil','ditambahkan','CssTambah');
@@ -70,7 +78,7 @@ class Berkas extends Controller {
 			Flasher::setFlash('Format File','Tidak diijinkan','CssTambah');
 			header('Location: ' . BASEURL . '/Berkas/index/'. $id_modul .'');
 			exit;
-		}
+		 }
 	}
 
     

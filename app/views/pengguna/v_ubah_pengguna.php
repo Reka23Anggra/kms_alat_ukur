@@ -13,10 +13,10 @@
                     <input type="text" class="input-text" name="id_user" value="<?= $data['data_pengguna']['id_user'] ?>" disable required/>
                 </label>
                 <label for="nama">
-                    <span>NAMA LENGKAP<span class="required">*</span></span>
+                    <span>Nama Lengkap<span class="required">*</span></span>
                     <input type="text" class="input-text" name="nama" value="<?= $data['data_pengguna']['nama'] ?>" required/>
                 </label>
-                <label for="level">
+               
                 <label for="jk">
                     <span>Jenis Kelamin</span>
                     <select name="jk" class="select-field">
@@ -25,7 +25,8 @@
                         <option value="P">Perempuan</option>
                     </select>
                 </label>
-                    <span>Level USER</span>
+                <label for="level">
+                    <span>Level User</span>
                     <select name="level" class="select-field">
                         <option value="<?= $data['data_pengguna']['level'] ?>"><?= $data['data_pengguna']['level'] ?></option>
                         <option value="Pakar">Pakar</option>
@@ -34,7 +35,7 @@
                     </select>
                 </label>
                 <label for="username">
-                    <span>USERNAME<span class="required">*</span></span>
+                    <span>Username<span class="required">*</span></span>
                     <input type="text" class="input-text" name="username" value="<?= $data['data_pengguna']['username'] ?>" required/>
                 </label>
                 <!-- <label for="password">

@@ -17,7 +17,7 @@
         </form>    
     </div>
     <div class="table-wrapper">
-        <table id="myTable" class="fl-table">
+        <table id="myTable" class="f1-table">
             <thead>
             <tr>
                 <th>No</th>
@@ -51,7 +51,7 @@
                 <td><?= $print['satuan'] ?></td>
                
                 <td>
-                <a title="Hapus Data" href="<?= BASEURL; ?>/Cetak/getData/<?= $print['id_perawatan_alat'] ?>" onClick="return confirm('Anda Yakin Akan Mencetak ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                <a title="Cetak Data" href="<?= BASEURL; ?>/Cetak/getData/<?= $print['id_perawatan_alat'] ?>" onClick="return confirm('Anda Yakin Akan Mencetak ?')"><img src="<?= BASEURL; ?>/img/laporan.png" alt=""  width="28" heigth="28"></a>
                 </td>
             </tr>
             <?php endforeach; ?>

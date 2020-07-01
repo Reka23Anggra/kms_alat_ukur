@@ -18,7 +18,7 @@
     </div>
     <!-- ini bagian judul -->
     <div class="table-wrapper">
-        <table id="myTable" class="fl-table">
+        <table id="myTable" class="f1-table">
             <thead>
             <tr>
                 <th>No</th>
@@ -51,8 +51,8 @@
                 <td><?= $eksplisit['thn_terbit'] ?></td>
                 <td><?= $eksplisit['penulis'] ?></td>
                 <td>
-                <a title="Ubah Data" href="<?= BASEURL; ?>/eksplisit/getUbah/<?= $eksplisit['id_eksplisit'] ?>/<?= $_SESSION['level'] ?> "><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
-                    <a title="Hapus Data" href="<?= BASEURL; ?>/eksplisit/hapus/<?= $eksplisit['id_eksplisit'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+                <a title="Ubah Data" href="<?= BASEURL; ?>/eksplisit/getUbah/<?= $eksplisit['id_eksplisit'] ?>/<?= $_SESSION['level'] ?> "><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="22" heigth="22"></a>
+                    <a title="Hapus Data" href="<?= BASEURL; ?>/eksplisit/hapus/<?= $eksplisit['id_eksplisit'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="19" heigth="19"></a>
                 </td>
             </tr>
             <?php endforeach; ?>

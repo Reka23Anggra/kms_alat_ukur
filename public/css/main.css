@@ -64,10 +64,10 @@ div.logo-app {
 }
 
 header {
-    margin-left: 0;
+    margin-left: 20px;
     padding: 12px;
     background: #719aad;
-    box-shadow: 0px 3px 5px grey;
+    box-shadow: 0px 3px 5px rgb(192, 194, 184);
     transition: margin-left .5s;
 }
 
@@ -77,10 +77,10 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #78c47e;
+    background: linear-gradient(rgb(197, 243, 88), rgb(116, 139, 240));
     box-shadow: #4ae257;
     color: #0e0c0c;
-    padding: 10px 10px 18px 50px;
+    padding: 10px 6px 16px 50px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -121,8 +121,9 @@ div.search-area {
 
 div.user-area {
     display: inline-block;
-    float:  right;
+    float: right;
     padding-top: 0px;
+    color: #F4F6F9;
 }
 
 div.user-area a{
@@ -130,7 +131,6 @@ div.user-area a{
     color: #6998a7;
     font-size: 20px;
 }
-
 .dropdown-container {
     display: none;
     background-color: #262626;
