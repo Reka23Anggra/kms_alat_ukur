@@ -35,7 +35,7 @@ class Login extends Controller {
 
 				
 				//$this->view('dashboard/index', $data_user);
-				header('Location: ' . BASEURL . '/pengguna/lihatProfile/');
+				header('Location: ' . BASEURL . '/Dashboard/index/');
 			
 			} else {
 				

@@ -85,10 +85,14 @@ class Pengguna extends Controller {
 	}
  
 	public function getUbah($id, $level){
-		if($level == 'Admin') {
+		if($_SESSION['level'] == 'Admin') {
 			header('Location: ' . BASEURL . '/pengguna/index');
 			Flasher::setFlash('Pengguna dengan level admin','tidak dapat diubah','CssHapus');
-		} else {
+		} elseif($_SESSION['level'] == 'Pegawai') {
+			header('Location: ' . BASEURL . '/pengguna/index');
+			Flasher::setFlash('Pengguna dengan level Pegawai','tidak dapat diubah','CssHapus');
+		}else{
+
 			$data['judul'] = 'Pengguna';
 			$data['sub_judul'] = 'Ubah Data Pengguna';
 

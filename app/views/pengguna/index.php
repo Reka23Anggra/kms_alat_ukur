@@ -9,7 +9,7 @@
         <?php Flasher::flash(); ?>
         <form action="">
             <a href="<?= BASEURL; ?>/Pengguna/tambahData">Tambah Data</a>
-            <select id="optionFilter"" name="optionFilter">
+            <select id="optionFilter" name="optionFilter">
                 <option value="1">NIK</option>
                 <option value="2">Nama Karyawan</option>
             </select>

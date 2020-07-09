@@ -9,11 +9,11 @@
         <?php Flasher::flash(); ?>
         <form action="">
             <a href="<?= BASEURL; ?>/Berkas/tambah">Tambah Modul</a>
-            <!-- <select id="optionFilter" name="optionFilter">
-                <option value="1">Id Eksplisit</option>
-                <option value="2">Nama Alat</option>
+            <select id="optionFilter" name="optionFilter">
+                <option value="1">Id Modul</option>
+                <!-- <option value="2">Nama Alat</option> -->
             </select>
-            <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini"> -->
+            <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
         </form>    
     </div>
     <!-- ini bagian judul -->
@@ -41,7 +41,7 @@
                 <td><?= $modul['nm_alat'] ?></td>
                 <td><?= $modul['modul'] ?></td>
                 <td>
-                <a href="<?= BASEURL; ?>/Berkas/getDetil/<?= $berkas['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/lihat.png" alt=""  width="25" heigth="25"></a>
+                <a href="<?= BASEURL; ?>/Berkas/getDetil/<?= $modul['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/lihat.png" alt=""  width="25" heigth="25"></a>
                 </td>
                     <!-- <a href="<?= BASEURL; ?>/Berkas/tambahBerkas/<?= $prg['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/berkas.png" alt=""  width="19" heigth="19"></a> -->
             </tr>
@@ -51,7 +51,7 @@
     </div>
 </div>
 
-<!-- <script>
+<script>
 function cari() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
@@ -72,5 +72,5 @@ function cari() {
   }
 }
 
-</script> -->
+</script>
 

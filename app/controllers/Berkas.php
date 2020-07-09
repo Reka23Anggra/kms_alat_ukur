@@ -85,14 +85,14 @@ class Berkas extends Controller {
 		$data['judul'] = 'Modul Pengetahuan';
         $data['sub_judul'] = 'Data Modul Pengetahuan';
 		$data['data_berkas'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_modul',$id_table = 'id_modul', $id);
-
-		$jumlah = $data['data_berkas']['modul'] + 1;
-		$this->model('DataHandle')->hitungLihat($id,$jumlah);
+		// $data['data_berkas'] = $this->model('Datahandle')->getBerkasById($id);
+		// $jumlah = $data['data_berkas']['modul'] + 1;
+		// $this->model('DataHandle')->hitungLihat($id,$jumlah);
 
 		
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
-		$this->view('berkas/v_lihat', $data);
+		$this->view('berkas/v_berkas_lihat', $data);
         $this->view('templates/footer');
 	}
 
@@ -104,7 +104,7 @@ class Berkas extends Controller {
 		
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
-		$this->view('berkas/v_lihat', $data);
+		$this->view('berkas/v_lihat_berkas', $data);
         $this->view('templates/footer');
 	}
 	

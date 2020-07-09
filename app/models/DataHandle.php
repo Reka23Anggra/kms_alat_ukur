@@ -305,6 +305,7 @@ class DataHandle {
 
          return $this->db->single();
     }
+
     public function getBerkas() {
         $this->db->query('SELECT
         tbl_modul.id_modul,
@@ -316,6 +317,21 @@ class DataHandle {
         tbl_eksplisit
         WHERE
         tbl_modul.id_modul = tbl_modul.id_modul and tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit and tbl_eksplisit.nm_alat = tbl_eksplisit.nm_alat and tbl_modul.modul = tbl_modul.modul');
+        return $this->db->resultSet();
+    }
+
+    public function getBerkasById($id) {
+        $this->db->query('SELECT
+        tbl_modul.id_modul,
+        tbl_eksplisit.id_eksplisit,
+        tbl_eksplisit.nm_alat,
+        tbl_modul.modul
+        FROM
+        tbl_modul
+        JOIN tbl_eksplisit ON tbl_modul.id_eksplisit = tbl_eksplisit.id_eksplisit 
+        JOIN tbl_eksplisit ON tbl_modul.nm_alat = tbl_eksplisit.nm_alat AND tbl_modul.id_modul = :id ');
+
+        $this->db->bind('id', $id);
         return $this->db->resultSet();
     }
 

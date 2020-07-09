@@ -27,7 +27,7 @@
         else if($_SESSION["level"] == 'Pegawai'){ ?>
             <a href="<?= BASEURL;?>/pengguna/v_detil_profil/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Profile") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/edituser.png" alt="" width="20" heigth="20">&nbsp Profile</a>
             <a href="<?= BASEURL;?>/cetak/index" <?php if($halaman == "Perawatan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/panah.png" alt="" width="20" heigth="20">&nbsp Perawatan </a>
-            <a href="<?= BASEURL;?>/Berkas/index/<?= $_SESSION['nik'] ?>" <?php if($halaman == "Modul Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/berkas.png" alt="" width="20" heigth="20">&nbsp Modul Pengetahuan</a>  
+            <a href="<?= BASEURL;?>/Berkas/index/<?= $_SESSION['id_user'] ?>" <?php if($halaman == "Modul Pengetahuan") echo "class='active'"; ?>><img style="float : left;" src="<?= BASEURL;?>/img/ebook.png" alt="" width="20" heigth="20">&nbsp Modul Pengetahuan</a>  
         <?php } ?>
 
     </nav>
