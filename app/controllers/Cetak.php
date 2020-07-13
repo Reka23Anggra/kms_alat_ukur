@@ -27,19 +27,19 @@ class Cetak extends Controller {
 		$this->view('templates/footer');
     }
 
-    public function getData() {
+    public function getData($id) {
         $data['judul'] = 'Perawatan';
         $data['sub_judul'] = 'Cetak Data Perawatan';
-        $data['cetak_data'] = $this->model('DataHandle')->getCetak();
+        $data['cetak_data'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_perawatan',$id_table = 'id_perawatan_alat', $id);
         
         if ($_SESSION["level"] == 'Admin') {
-			$data['cetak_data'] = $this->model('DataHandle')->getCetak();
+			$data['cetak_data'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_perawatan',$id_table = 'id_perawatan_alat', $id);
 
 		// }else {
 		// 	$id_user = $_SESSION['id_user'];
 		// 	$data['cetak_data'] = $this->model('DataHandle')->getCetakById($id_user);
 		// }
-        $this->view('cetak/v_cetak', $data);
+        $this->view('cetak/v_print', $data);
     }
     
 }
