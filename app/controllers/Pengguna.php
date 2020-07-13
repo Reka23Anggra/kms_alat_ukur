@@ -8,9 +8,6 @@ class Pengguna extends Controller {
 	}
 
     public function index() {
-		// if($_SESSION["level"] !== 'Admin') {
-		// 	header('Location: ' . BASEURL . '/login/index');
-		// }
 
         $data['judul'] = 'User';
 		$data['sub_judul'] = 'Daftar Pengguna';

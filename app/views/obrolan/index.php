@@ -9,11 +9,11 @@
         <?php Flasher::flash(); ?>
         <form action="">
             <a href="<?= BASEURL; ?>/Obrolan/tambahData">Tambah Pertanyaan</a>
-            <!-- <select id="optionFilter"" name="optionFilter">
-                <option value="1">NIK</option>
-                <option value="2">Nama Karyawan</option>
-            </select> -->
-            <!-- <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini"> -->
+            <select id="optionFilter" name="optionFilter">
+                <option value="1">ID diskusi</option>
+                <option value="2">NIK</option>
+            </select>
+        <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
         </form>    
     </div>
     <!-- ini bagian judul -->
@@ -28,7 +28,8 @@
                 <th>Pertanyaan</th>
                 <th>Level</th>
                 <th>Proses</th>
-                
+                <th>Jawaban Pakar</th>
+
             </tr>
             </thead>
             <tbody>
@@ -41,13 +42,26 @@
                 <td><?= $pertanyaan['id_user'] ?></td>
                 <td><?= $pertanyaan['nama'] ?></td>
                 <td><?= $pertanyaan['chat'] ?></td>
-                <td><?= $pertanyaan['level'] ?></td>
-
+                <td><?= $pertanyaan['level'] ?></td>                
+                
                 <td>
+                <?php
+                    if($_SESSION['level'] == 'Pakar')
+                    {?>
+                       <a title="Jawab" href="<?= BASEURL; ?>/obrolan/getUbahP/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>"><img src="<?= BASEURL; ?>/img/balas.png" alt=""  width="19" heigth="19"></a>
+                   <?php } elseif(($_SESSION['level'] == 'Pegawai')||($_SESSION['level'] == 'Admin') ){ ?>
+
+                
                     <a title="Ubah Data" href="<?= BASEURL; ?>/obrolan/getUbah/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
                     <!-- <a title="Hapus Data" href="<?= BASEURL; ?>/obrolan/hapus/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a> -->
                 </td>
-            </tr>
+                   <?php } ?>
+
+                   <td><?= $pertanyaan['jawab'] ?></td>
+                </tr>
+
+                
+
             <?php endforeach; ?>
             <tbody>
         </table>

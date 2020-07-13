@@ -17,8 +17,8 @@ class Obrolan extends Controller {
 		// $Kodetacit = mysqli_query($this->koneksi->link, "select max(id_tacit) from tbl_tacit");
 		// $Kode = mysqli_fetch_array($Kodetacit);
 
-		// $data['id_chat'] = $this->model('Datahandle')->getAll($table = 'obrolan', $id_table = 'id_chat', $id); 
-		// // $data['data_chat'] = $this->model('DataHandle')->getAllWhere($table = 'obrolan',$id_table = 'id_chat', $id);
+		//$data['data_chat'] = $this->model('Datahandle')->getAll($table = 'obrolan', $id_table = 'id_chat', $id); 
+		// $data['data_chat'] = $this->model('DataHandle')->getKode($table = 'obrolan',$id_table = 'id_chat', $id);
 
 		// $_SESSION['id_user'] = $_POST['id_user'];
 		// $nama = $_POST['nama'];
@@ -26,7 +26,7 @@ class Obrolan extends Controller {
 		// $_SESSION['level'] = $_POST['level'];
 		// $kode_id = $_POST['id_chat'];
 
-		// if( $this->model('Datahandle')->getAllById($table = 'obrolan', $id_table = 'id_chat', $id) ) {
+		// if( $this->model('Datahandle')->getKode($table = 'obrolan', $id_table = 'id_chat', $id) == '' ) {
 			
 		// 		$kodeTc = substr($Kode[0],4);
 		// 		$Kode =(int) $kodeTc;
@@ -63,6 +63,23 @@ class Obrolan extends Controller {
     }
 
     public function getUbah($id, $table){
+		// if($_SESSION['level'] == 'Pegawai') {
+		// 	header('Location: ' . BASEURL . '/obrolan/index');
+		// 	Flasher::setFlash('User dengan level Pegawai','tidak dapat Mutakhir','CssHapus');
+		// } else {
+			$data['judul'] = 'Ubah Pertanyaan';
+			$data['sub_judul'] = 'Ubah Pertanyaan';
+
+			$data['data_chat'] = $this->model('DataHandle')->getAllWhere($table = 'obrolan',$id_table = 'id_chat', $id);
+			$this->view('templates/header', $data);
+			$this->view('templates/sidebar', $data);
+			$this->view('obrolan/v_ubah_chat', $data);
+			$this->view('templates/footer');
+		//  }
+		
+	}
+	
+	public function getUbahP($id, $table){
 		if($_SESSION['level'] == 'Pegawai') {
 			header('Location: ' . BASEURL . '/obrolan/index');
 			Flasher::setFlash('User dengan level Pegawai','tidak dapat Mutakhir','CssHapus');
@@ -73,7 +90,7 @@ class Obrolan extends Controller {
 			$data['data_chat'] = $this->model('DataHandle')->getAllWhere($table = 'obrolan',$id_table = 'id_chat', $id);
 			$this->view('templates/header', $data);
 			$this->view('templates/sidebar', $data);
-			$this->view('obrolan/v_ubah_chat', $data);
+			$this->view('obrolan/v_ubah_chat_p', $data);
 			$this->view('templates/footer');
 		 }
 		
@@ -83,6 +100,19 @@ class Obrolan extends Controller {
 		//var_dump($_POST);
 
 		if( $this->model('DataHandle')->ubahDataChat($_POST) > 0) {
+		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
+		 	header('Location: ' . BASEURL . '/Obrolan/index');
+		 	exit;
+		} else {
+		 	Flasher::setFlash('gagal','diubah','CssHapus');
+		 	header('Location: ' . BASEURL . '/Obrolan/index');
+		 	exit;
+		}
+    }   
+    public function ubahDataP() {
+		//var_dump($_POST);
+
+		if( $this->model('DataHandle')->ubahDataChatP($_POST) > 0) {
 		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
 		 	header('Location: ' . BASEURL . '/Obrolan/index');
 		 	exit;

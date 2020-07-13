@@ -9,7 +9,7 @@
         <?php Flasher::flash(); ?>
         <form action="">
             <a href="<?= BASEURL; ?>/Tacit/tambahData">Tambah Data</a>
-            <select id="optionFilter"" name="optionFilter">
+            <select id="optionFilter" name="optionFilter">
                 <option value="1">Id Tacit</option>
                 <option value="2">Nama ALat Ukur</option>
             </select>

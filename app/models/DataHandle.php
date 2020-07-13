@@ -140,13 +140,13 @@ class DataHandle {
     
     }
 
-    public function AmbilDataMax($table, $id_table)
-    {
-        $query = "select max ('' . $id_table . '') from ' . $table . '";
-        $this->db->execute();
+    // public function AmbilDataMax($table, $id_table)
+    // {
+    //     $query = "select max ('' . $id_table . '') from ' . $table . '";
+    //     $this->db->execute();
 
-        return $this->db->single();
-    }
+    //     return $this->db->single();
+    // }
 
     public function tambahDataTacit($data)
      {
@@ -231,7 +231,7 @@ class DataHandle {
 
     public function tambahDataChat($data)
     {
-        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level)";
+        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level, :jawab)";
 
         $this->db->query($query);
         $this->db->bind('id_chat', $data['id_chat']);
@@ -239,6 +239,25 @@ class DataHandle {
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('chat', $data['chat']);
         $this->db->bind('level', $data['level']);
+        // $this->db->bind('jawab', $data['jawab']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+
+    }
+
+    public function tambahDataChatP($data)
+    {
+        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level, :jawab)";
+
+        $this->db->query($query);
+        $this->db->bind('id_chat', $data['id_chat']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('chat', $data['chat']);
+        $this->db->bind('level', $data['level']);
+        $this->db->bind('jawab', $data['jawab']);
 
         $this->db->execute();
 
@@ -248,7 +267,7 @@ class DataHandle {
 
     public function ubahDataChat($data)
     {
-        $query = "UPDATE obrolan SET id_chat = :id_chat, id_user = :id_user, nama = :nama, chat = :chat,  level = :level WHERE id_chat = :id_chat";
+        $query = "UPDATE obrolan SET id_chat = :id_chat, id_user = :id_user, nama = :nama, chat = :chat,  level = :level, jawab = :jawab WHERE id_chat = :id_chat";
 
         $this->db->query($query);
         $this->db->bind('id_chat', $data['id_chat']);
@@ -256,6 +275,23 @@ class DataHandle {
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('chat', $data['chat']);
         $this->db->bind('level', $data['level']);
+        $this->db->bind('jawab', $data['jawab']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+    public function ubahDataChatP($data)
+    {
+        $query = "UPDATE obrolan SET id_chat = :id_chat, id_user = :id_user, nama = :nama, chat = :chat,  level = :level, jawab = :jawab WHERE id_chat = :id_chat";
+
+        $this->db->query($query);
+        $this->db->bind('id_chat', $data['id_chat']);
+        $this->db->bind('id_user', $data['id_user']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('chat', $data['chat']);
+        $this->db->bind('level', $data['level']);
+        $this->db->bind('jawab', $data['jawab']);
 
         $this->db->execute();
 
@@ -351,4 +387,17 @@ class DataHandle {
 
         return $this->db->rowCount();
     }
+
+    public function getKode($table, $id_table, $id)
+    {
+        $query = "SELECT max from $table WHERE $id_table =:id ";
+
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
 }
