@@ -14,7 +14,7 @@
         <div class="navigasi">
             <?php Flasher::flash(); ?>
             <div class="pencarian">
-                <select id="optionFilter"" name="optionFilter">
+                <select id="optionFilter" name="optionFilter">
                     <option value="1">Judul Pengetahuan</option>
                     <option value="2">Stream</option>
                     <option value="3">Deskripsi</option>

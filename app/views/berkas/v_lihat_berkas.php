@@ -6,6 +6,6 @@
 </div>
 <div class="data-table">
     
-    <embed src="app/berkas/<?= $data['data_berkas']['modul'] ?>.pdf" type="application/pdf" width="100%" height="650px" />
+    <embed src="/kms_alat_ukur/app/berkas/<?= $data['data_berkas']['modul'] ?>.pdf" type="application/pdf" width="100%" height="650px" />
     
 </div>

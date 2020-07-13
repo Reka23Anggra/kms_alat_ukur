@@ -18,7 +18,7 @@
                 </label>
                 <label for="nama">
                     <span>Nama User<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="nama" value="<?= $data['data_chat']['nama'] ?>" placeholder = "<?= $data['data_chat']?>/>
+                    <input type="text" class="input-text" name="nama" value="<?= $data['data_chat']['nama'] ?>" placeholder = "<?= $data['data_chat']?>"/>
                 </label>
                 <label for="chat">
                     <span>Pertanyaan<span class="required">*</span></span>
@@ -26,7 +26,7 @@
                 </label>
                 <label for="level">
                     <span>Level<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="level" value="<?= $data['data_chat']['level'] ?>" placeholder = "<?= $data['data_chat']?>/>
+                    <input type="text" class="input-text" name="level" value="<?= $data['data_chat']['level'] ?>" placeholder = "<?= $data['data_chat']?>"/>
                 </label>
                 <!-- <label for="jawab">
                     <span>Jawaban<span class="required">*</span></span> -->

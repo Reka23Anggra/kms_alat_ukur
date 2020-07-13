@@ -231,7 +231,7 @@ class DataHandle {
 
     public function tambahDataChat($data)
     {
-        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level, :jawab)";
+        $query = "INSERT INTO obrolan VALUES (:id_chat, :id_user, :nama, :chat, :level, '' )";
 
         $this->db->query($query);
         $this->db->bind('id_chat', $data['id_chat']);
