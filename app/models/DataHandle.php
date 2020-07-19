@@ -300,11 +300,9 @@ class DataHandle {
 
 
     public function getCetak() {
-        $this->db->query('SELECT
+        $this->db->query("SELECT
         tbl_perawatan.id_perawatan_alat,
         tbl_tacit.nm_alat,
-        tbl_tacit.id_tacit,
-        tbl_eksplisit.id_eksplisit,
         tbl_tacit.fungsi,
         tbl_tacit.penggunaan_alat,
         tbl_tacit.perawatan_alat,
@@ -315,7 +313,7 @@ class DataHandle {
         tbl_tacit,
         tbl_eksplisit
         WHERE
-        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit ');
+        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat");
         return $this->db->resultSet();
     }
 
@@ -323,8 +321,6 @@ class DataHandle {
         $this->db->query('SELECT
         tbl_perawatan.id_perawatan_alat,
         tbl_tacit.nm_alat,
-        tbl_tacit.id_tacit,
-        tbl_eksplisit.id_eksplisit,
         tbl_tacit.fungsi,
         tbl_tacit.penggunaan_alat,
         tbl_tacit.perawatan_alat,
@@ -335,7 +331,7 @@ class DataHandle {
         tbl_tacit,
         tbl_eksplisit
         WHERE
-        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat and tbl_tacit.id_tacit = tbl_tacit.id_tacit and  tbl_eksplisit.id_eksplisit = tbl_eksplisit.id_eksplisit');
+        tbl_perawatan.id_perawatan_alat = tbl_perawatan.id_perawatan_alat');
          
          $this->db->bind('id_perawatan_alat', $id);
 
@@ -399,5 +395,28 @@ class DataHandle {
 
         return $this->db->rowCount();
     }
+
+
+    public function tambahDataPerawatan($data)
+    {
+        $query = "INSERT INTO tbl_perawatan VALUES (:id_perawatan_alat, :nm_alat,  :id_tacit, :id_eksplisit, :fungsi, :penggunaan_alat, :perawatan_alat_tacit, :perawatan_alat_eks, :satuan)";
+
+        $this->db->query($query);
+        $this->db->bind('id_perawatan_alat', $data['id_perawatan_alat']);
+        $this->db->bind('nm_alat', $data['nm_alat']);
+        $this->db->bind('id_tacit', $data['id_tacit']);
+        $this->db->bind('id_eksplisit', $data['id_eksplisit']);
+        $this->db->bind('fungsi', $data['fungsi']);
+        $this->db->bind('penggunaan_alat', $data['penggunaan_alat']);
+        $this->db->bind('perawatan_alat_tacit', $data['perawatan_alat_tacit']);
+        $this->db->bind('perawatan_alat_eks', $data['perawatan_alat_eks']);
+        $this->db->bind('satuan', $data['satuan']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+
+    }
+
 
 }

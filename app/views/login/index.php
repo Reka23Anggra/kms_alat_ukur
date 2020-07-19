@@ -24,16 +24,16 @@
             </label>
             <input id="user-email" class="form-content" type="text" name="id_user" autocomplete="on" placeholder="Masukan NIK" required />
             <div class="form-border"></div>
-            <label for="user-password" style="padding-top:22px">&nbsp;Password
+            <label for="user-password" style="padding-top:22px">&nbsp;Kata Sandi
             </label>
-            <input id="user-password" class="form-content" type="password" name="password" placeholder="Masukan password" required />
+            <input id="user-password" class="form-content" type="password" name="password" placeholder="Masukan kata sandi" required />
             <div class="form-border"></div>
             <!-- <a href="#">
             <legend id="forgot-pass">Lupa password ?</legend>
             </a> -->
-            <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+            <input id="submit-btn" type="submit" name="submit" value="MASUK" />
 
-            <!-- <a href="<?= BASEURL; ?>/Pengguna/tambahData/">Daftar Akun</a> -->
+            <!-- <a href="<?= BASEURL; ?>/pengguna/tambahData/">Daftar Akun</a> -->
 
             <!-- <td>
                     <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>

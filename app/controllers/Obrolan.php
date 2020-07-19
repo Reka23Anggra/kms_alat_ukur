@@ -13,32 +13,6 @@ class Obrolan extends Controller {
     }
 
     public function tambahData() {
-		// $data['auto_kode'] = $this->model('DataHandle')->AmbilDataMax($table = 'tbl_tacit', $id_table = 'id_tacit');
-		// $Kodetacit = mysqli_query($this->koneksi->link, "select max(id_tacit) from tbl_tacit");
-		// $Kode = mysqli_fetch_array($Kodetacit);
-
-		//$data['data_chat'] = $this->model('Datahandle')->getAll($table = 'obrolan', $id_table = 'id_chat', $id); 
-		// $data['data_chat'] = $this->model('DataHandle')->getKode($table = 'obrolan',$id_table = 'id_chat', $id);
-
-		// $_SESSION['id_user'] = $_POST['id_user'];
-		// $nama = $_POST['nama'];
-		// $chat = $_POST['chat'];
-		// $_SESSION['level'] = $_POST['level'];
-		// $kode_id = $_POST['id_chat'];
-
-		// if( $this->model('Datahandle')->getKode($table = 'obrolan', $id_table = 'id_chat', $id) == '' ) {
-			
-		// 		$kodeTc = substr($Kode[0],4);
-		// 		$Kode =(int) $kodeTc;
-
-		// 		$Kode = $Kode + 1;
-		// 		$kode_id = "T" .str_pad($Kode, 4, "0", STR_PAD_LEFT);
-		// 	}
-		// 	else
-		// 	{
-		// 		$kode_id = "T0001";
-		// 	}
-	
 
          $data['judul'] = 'Tambah Pertanyaan';
          $data['sub_judul'] = 'Tambah Diskusi';

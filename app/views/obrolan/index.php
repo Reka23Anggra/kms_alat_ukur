@@ -18,7 +18,7 @@
     </div>
     <!-- ini bagian judul -->
     <div class="table-wrapper">
-        <table id="myTable" class="fl-table">
+        <table id="myTable" class="f1-table">
             <thead>
             <tr>
                 <th>No</th>

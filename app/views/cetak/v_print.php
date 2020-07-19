@@ -40,84 +40,73 @@ page[size="A5"][layout="landscape"] {
   }
 }
 .fl-table {
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 0px;
+    font-size: 12px;
     font-weight: normal;
     border-collapse: collapse;
-    width: 60%;
+    width: 80%;
     max-width: 100%;
     white-space: nowrap;
-    height: 60px;
-    /* background-color: #9bd2da; */
+    height: 30px;
     word-wrap: break-word;
     border: 1px solid #000000;
+    text-align: left;
 
 }
 
 .fl-table td, .fl-table th {
-    text-align: center;
-    padding: 8px;
-    width: 60px;
+    text-align: left;
+    padding: 30px;
+    width: 120px;
+    padding-top: 5px;
     word-wrap: break-word;
 }
 .side-form{
-  max-width: 50%;
-  padding: 20px 12px 10px 20px;
-	font: 13px Raleway, sans-serif;
+  max-width: 100%;
+  padding: 10px 8px 10px 20px;
+  font: 13px Raleway, sans-serif;
+  position: absolute;
 }
 .judul{
-    margin-top: 25px;
-    float: center;
+    position: fixed;
+    margin-top: 8px ;
+    margin-left: 200px;
+    float: right;
+    margin-right: 40px;
+}
+.judul-1{
+    position: absolute;
+    margin-top: 8px ;
+    margin-left: 210px;
+    float: right;
+    margin-right: 40px;
 }
 
 </style>
-<page size="A4" layout="landscape">
-    <div style="float: left">
+<page [size="A4"] [layout="landscape"]>
+    <div style="judul-1" >
         <img src="<?= BASEURL;?>/img/dntikms.png" alt="" width="200" heigth="200" alt="">
-        <h3 class="judul"> KMS PERAWATAN ALAT UKUR</h3> 
+       
     </div>
+        <div class="judul">
+        <h3> KMS PERAWATAN ALAT UKUR</h3> 
+        </div>
     
     <div class="side-form">
     <div class="table-wrapper">
     <table id="myTable" class="fl-table">
             <thead>
-            <tr>
-                <th>No</th>
-                <th>Id Perawatan Alat</th>
-                <th>Nama Alat</th>
-                <th>Id Tacit</th>
-                <th>Id Eksplisit</th>
-                <th>Fungsi Alat</th>
-            
-            </tr>
-           
-            <tr>
-                <td><?= 1 ?></td>
-                <td><?=$data['cetak_data']['id_perawatan_alat'] ?></td>
-                <td><?=$data['cetak_data']['nm_alat'] ?></td>
-                <td><?=$data['cetak_data']['id_tacit'] ?></td>
-                <td><?=$data['cetak_data']['id_eksplisit'] ?></td>
-                <td><?=$data['cetak_data']['fungsi'] ?></td>
-            </tr><br>
+            <tr>  <th>No</th><td><?= 1 ?></td><br> </tr> <br>
+            <tr>  <th>Id Perawatan Alat</th> <td><?=$data['cetak_data']['id_perawatan_alat'] ?></td></tr> <br>
+            <tr>  <th>Nama Alat</th> <td><?=$data['cetak_data']['nm_alat'] ?></td> <tr> <br>
+            <tr>  <th>Fungsi Alat</th> <td><?=$data['cetak_data']['fungsi'] ?></td>  </tr><br>
+            <tr>  <th>Penggunaan Alat</th> <td><?=$data['cetak_data']['penggunaan_alat'] ?></td>  </tr><br>
+            <tr>  <th>Perawatan Alat Tacit</th> <td><?=$data['cetak_data']['perawatan_alat_tacit'] ?></td></tr> <br>
+            <tr>  <th>Perawatan Alat Eksplisit</th>  <td><?=$data['cetak_data']['perawatan_alat_eks'] ?></td> <tr> <br>
+            <tr>  <th>Satuan Alat</th>  <td><?=$data['cetak_data']['satuan'] ?></td>  </tr><br>
+     
             </thead>
-     <table id="myTable" class="fl-table">
-            <thead>       
-            <tr>
-                <th>Penggunaan Alat</th>
-                <th>Perawatan Alat Tacit</th>
-                <th>Perawatan Alat Eksplisit</th>
-                <th>Satuan Alat</th>
-                
-            </tr>
-
-            <tr>
-                <td><?=$data['cetak_data']['penggunaan_alat'] ?></td>
-                <td><?=$data['cetak_data']['perawatan_alat_tacit'] ?></td>
-                <td><?=$data['cetak_data']['perawatan_alat_eks'] ?></td>
-                <td><?=$data['cetak_data']['satuan'] ?></td>
-            </tr>
-            </thead>
+  
             <tbody>
          
             
@@ -128,7 +117,7 @@ page[size="A5"][layout="landscape"] {
         <br>
         <br>
         <br>
-        <p>KMS Perawatan Alat Ukur</p>
+        <p>&emsp; &nbsp; &nbsp; &nbsp; &nbsp; KMS Perawatan Alat Ukur</p>
         <br>
         <br>
         <br>

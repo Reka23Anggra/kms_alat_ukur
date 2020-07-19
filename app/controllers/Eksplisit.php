@@ -23,7 +23,6 @@ class Eksplisit extends Controller {
      }
 
      public function simpan() {
-        // var_dump($_POST);
 
 		if( $this->model('DataHandle')->tambahDataEksplisit($_POST) > 0) {
 			Flasher::setFlash('Berhasil','ditambahkan','CssTambah');

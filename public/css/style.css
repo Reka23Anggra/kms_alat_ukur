@@ -40,7 +40,7 @@ body{
 .f4-table td, .f4-table th {
     text-align: justify;
     padding: 8px;
-    width: 40px;
+    width: 90px;
     word-wrap: break-word;
 }
 .fl-table td {
@@ -63,7 +63,7 @@ body{
 
 .fl-table thead th:nth-child(odd) {
     color: #000000;
-    background: #989dcc;
+    background: #abced8;
 }
 
 .fl-table tr:nth-child(even) {
@@ -93,9 +93,9 @@ body{
     word-wrap: break-word;
   }
   
-  #myTable tr:nth-child(even){background-color: #969c9c;}
+  #myTable tr:nth-child(even){background-color: #a5bebe;}
   
-  #myTable tr:hover {background-color: #b0c2b3;}
+  #myTable tr:hover {background-color: #91c798;}
   
   #myTable th {
     padding-top: 12px;
@@ -116,7 +116,7 @@ body{
   }
   
 #myTable2 td, #myTable2 th {
-    border: 1px solid rgb(131, 144, 150);
+    border: 1px solid rgb(164, 188, 199);
     padding: 8px;
   }
   
@@ -284,7 +284,7 @@ body{
     text-align: center;
 }
 
-pesan-masuk {
+.pesan-masuk {
     text-decoration: none;
     display: inline-block;
     background-color: #1982e4;

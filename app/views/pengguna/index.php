@@ -7,8 +7,11 @@
 <div class="data-table">
     <div class="navigasi">
         <?php Flasher::flash(); ?>
+        <? if($_SESSION['level'] == 'Admin')
+                    {?>
         <form action="">
             <a href="<?= BASEURL; ?>/Pengguna/tambahData">Tambah Data</a>
+            <?}?>
             <select id="optionFilter" name="optionFilter">
                 <option value="1">NIK</option>
                 <option value="2">Nama Karyawan</option>
@@ -49,8 +52,17 @@
                 <td><?= $pengguna['no_hp'] ?></td>
                 <td><?= $pengguna['email'] ?></td>
                 <td>
+                <?php if($_SESSION['level'] == 'Admin')
+                    {?>
                     <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbah/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="22" heigth="22"></a>
+                 
                     <a title="Hapus Data" href="<?= BASEURL; ?>/pengguna/hapus/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="19" heigth="19"></a>
+                    <?php }?>
+                <?php if($_SESSION['level'] == 'Pegawai')
+                    {?>
+                    <a title="Ubah Data" href="<?= BASEURL; ?>/pengguna/getUbahPg/<?= $pengguna['id_user'] ?>/<?= $pengguna['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="22" heigth="22"></a>
+                    <?php } ?>
+
                 </td>
             </tr>
             <?php endforeach; ?>

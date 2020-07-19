@@ -9,7 +9,7 @@ class Pengguna extends Controller {
 
     public function index() {
 
-        $data['judul'] = 'User';
+        $data['judul'] = 'Pengguna';
 		$data['sub_judul'] = 'Daftar Pengguna';
 		$data['data_pengguna'] = $this->model('DataHandle')->getAll($table = 'tbl_user');
 		
@@ -20,13 +20,13 @@ class Pengguna extends Controller {
 	}
 	
 	public function detilProfile($id) {
-		$data['judul'] = 'Profile';
+		$data['judul'] = 'Lihat Profile';
 		$data['sub_judul'] = 'Ubah Data Profile';
-		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_pengguna',$id_table = 'nik', $id);
-		$data['data_pesan'] = $this->model('DataHandle')->getPesanMasuk($table = 'tbl_pesan', $id_table = 'nik_penerima', $id=$id, $orderBy='tgl_kirim');
+		$data['data_pengguna'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_user',$id_table = 'id_user', $id);
+		//$data['data_pesan'] = $this->model('DataHandle')->getPesanMasuk($table = 'tbl_pesan', $id_table = 'nik_penerima', $id=$id, $orderBy='tgl_kirim');
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
-		$this->view('pengguna/v_detil_profile', $data);
+		$this->view('pengguna/lihatProfile', $data);
 		$this->view('templates/footer');
 	}
 
@@ -82,14 +82,6 @@ class Pengguna extends Controller {
 	}
  
 	public function getUbah($id, $level){
-		if($_SESSION['level'] == 'Admin') {
-			header('Location: ' . BASEURL . '/pengguna/index');
-			Flasher::setFlash('Pengguna dengan level admin','tidak dapat diubah','CssHapus');
-		} elseif($_SESSION['level'] == 'Pegawai') {
-			header('Location: ' . BASEURL . '/pengguna/index');
-			Flasher::setFlash('Pengguna dengan level Pegawai','tidak dapat diubah','CssHapus');
-		}else{
-
 			$data['judul'] = 'Pengguna';
 			$data['sub_judul'] = 'Ubah Data Pengguna';
 
@@ -100,7 +92,6 @@ class Pengguna extends Controller {
 			$this->view('templates/footer');
 		}
 		
-	}
 	
 	public function ubahData() {
 		//var_dump($_POST);
@@ -131,11 +122,11 @@ class Pengguna extends Controller {
 
 		if( $this->model('DataHandle')->ubahDataPengguna ($_POST) > 0) {
 		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
-		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/' . $_SESSION['id_user'] .'');
+		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/' );
 		 	exit;
 		} else {
 		 	Flasher::setFlash('gagal','diubah','CssHapus');
-		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/' . $_SESSION['id_user'] .'');
+		 	header('Location: ' . BASEURL . '/pengguna/lihatProfile/');
 		 	exit;
 		}
 	}
@@ -159,7 +150,7 @@ class Pengguna extends Controller {
 		
 		// GET DATA PASS
 		$post = array(
-			'id_user' => $nik,
+			'id_user' => $id,
 			'password_lama' => $pass_lama,
 			'password_baru' => $pass_baru,
 			'conf_password_baru' => $conf_pass_baru

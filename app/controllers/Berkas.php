@@ -8,8 +8,8 @@ class Berkas extends Controller {
 	}
 
    public function index(){
-        $data['judul'] = 'Modul Pengetahuan Eksplisit';
-		$data['sub_judul'] = 'Modul Pengetahuan';
+        $data['judul'] = 'Modul Pengetahuan';
+		$data['sub_judul'] = 'Lihat Modul Pengetahuan';
 		$data['data_berkas'] = $this->model('DataHandle')->getAll($table = 'tbl_modul');
 		// $data['data_berkas'] = $this->model('DataHandle')->getAllById($table='tbl_modul', $id_table='id_', $id=$id_);
 		
@@ -108,5 +108,17 @@ class Berkas extends Controller {
         $this->view('templates/footer');
 	}
 	
+	public function hapus($id)
+    {
+        if( $this->model('DataHandle')->hapusData($id, $table = 'tbl_modul', $id_table = 'id_modul') > 0) {
+            Flasher::setFlash('Berhasil','dihapus','CssHapus');
+            header('Location: ' . BASEURL . '/Berkas/index');
+            exit;
+        } else {
+            Flasher::setFlash('Gagal','ditambahkan','CssHapus');
+            header('Location: ' . BASEURL . '/Berkas/index');
+            exit;
+        }	
+    }
 
 }

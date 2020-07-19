@@ -8,7 +8,9 @@
     <div class="navigasi">
         <?php Flasher::flash(); ?>
         <form action="">
+        <?php if($_SESSION['level'] == 'Admin') {?>
             <a href="<?= BASEURL; ?>/Berkas/tambah">Tambah Modul</a>
+        <?php } ?>
             <select id="optionFilter" name="optionFilter">
                 <option value="1">Id Modul</option>
                 <!-- <option value="2">Nama Alat</option> -->
@@ -42,6 +44,10 @@
                 <td><?= $modul['modul'] ?></td>
                 <td>
                 <a href="<?= BASEURL; ?>/Berkas/getDetil/<?= $modul['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/lihat.png" alt=""  width="25" heigth="25"></a>
+               
+               <?php if($_SESSION['level'] == 'Admin') {?>
+                 <a title="Hapus Data" href="<?= BASEURL; ?>/Berkas/hapus/<?= $modul['id_modul'] ?>/<?= $modul['modul'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a>
+               <?php } ?>
                 </td>
                     <!-- <a href="<?= BASEURL; ?>/Berkas/tambahBerkas/<?= $prg['id_modul'] ?>"><img src="<?= BASEURL; ?>/img/berkas.png" alt=""  width="19" heigth="19"></a> -->
             </tr>

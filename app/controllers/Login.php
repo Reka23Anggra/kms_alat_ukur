@@ -39,7 +39,7 @@ class Login extends Controller {
 			
 			} else {
 				
-				header('Location: ' . BASEURL . '/pengguna/v_tambah_pengguna/');
+				header('Location: ' . BASEURL . '/pengguna/tambahData/');
 			}
 		}
 		//  else {

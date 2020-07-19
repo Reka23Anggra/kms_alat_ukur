@@ -80,7 +80,7 @@ footer {
     background: linear-gradient(rgb(197, 243, 88), rgb(116, 139, 240));
     box-shadow: #4ae257;
     color: #0e0c0c;
-    padding: 10px 6px 16px 50px;
+    padding: 6px 6px 16px 30px;
     transition: all 0.3s ease-in-out;
 }
 

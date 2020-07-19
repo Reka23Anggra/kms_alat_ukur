@@ -1,9 +1,9 @@
 <div class="judul">
     <h4><?= $data['judul'] ?></h4>
 </div>
-<div class="head-table">
+<!-- <div class="head-table">
     <h4><?= $data['sub_judul'] ?></h4>
-</div>
+</div> -->
 <div class="data-table">
     <div class="navigasi">
         <?php Flasher::flash(); ?>
@@ -23,8 +23,6 @@
             <tr>
                 <th>No</th>
                 <th>Nama Alat</th>
-                <th>Gambar</th>
-
             </tr>
             </thead>
             <tbody>
@@ -34,7 +32,6 @@
             <tr>
                 <td><?= $no++; ?></td>
                 <td><?= $pertanyaan['nm_alat'] ?></td>
-                <!-- <td><?= $pertanyaan['gambar'] ?></td> -->
         
             </tr>
 

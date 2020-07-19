@@ -9,7 +9,7 @@ class Dashboard extends Controller {
 	}
 	
 	public function index () {
-        $data['judul'] = 'Dashboard';
+        $data['judul'] = 'Daftar Nama Alat';
         $data['data_alat'] = $this->model('DataHandle')->getAll($table = 'tbl_alat');;
 		
 		$this->view('templates/header', $data);
