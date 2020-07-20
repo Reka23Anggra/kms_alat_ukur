@@ -5,8 +5,8 @@ body {
  background: #888e94;
   background-size: cover;
 
-/* background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
-background-repeat: no-repeat; */
+background: -webkit-linear-gradient(bottom, #a9b3ad, #636c70);
+background-repeat: no-repeat;
 
 }
 label {
@@ -39,14 +39,14 @@ label {
   text-align: center;
 }
 #signup {
-  color: #1982e4;
+  color: #69b2f7;
   font-family: "Raleway", sans-serif;
   font-size: 10pt;
   margin-top: 16px;
   text-align: center;
 }
 #submit-btn {
-  background: #3091ec;
+  background: #5ba9f1;
   border: none;
   border-radius: 21px;
   box-shadow: 0px 1px 8px #b4eb4d;
@@ -62,7 +62,7 @@ label {
 
 #submit-btn:hover {
   box-shadow: 0px 3px 18px #d7e933;
-  background: #0ebe35;
+  background: #06c931;
 }
 
 .form {

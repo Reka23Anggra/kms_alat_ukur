@@ -11,7 +11,7 @@
             <a href="<?= BASEURL; ?>/Tacit/tambahData">Tambah Data</a>
             <select id="optionFilter" name="optionFilter">
                 <option value="1">Id Tacit</option>
-                <option value="2">Nama ALat Ukur</option>
+                <option value="4">Nama ALat Ukur</option>
             </select>
             <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
         </form>    

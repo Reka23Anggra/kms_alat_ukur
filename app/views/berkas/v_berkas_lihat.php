@@ -25,7 +25,7 @@
                 </label>
                 <label>
                     <span>FILE<span class="required">*</span></span>
-                    <a href="<?= BASEURL; ?>/Berkas/getBerkas/<?= $data['data_berkas']['id_modul'] ?>"><?= $data['data_berkas']['modul'] ?>.PDF</a>
+                    <a href="<?= BASEURL; ?>/Berkas/getBerkas/<?= $data['data_berkas']['id_modul'] ?>"><?= $data['data_berkas']['modul'] ?></a>
                 </label>
     </div>
  

@@ -32,14 +32,14 @@ body{
 
 .fl-table td, .fl-table th {
     text-align: center;
-    padding: 8px;
+    padding: 10px;
     width: 60px;
     word-wrap: break-word;
 }
 
 .f4-table td, .f4-table th {
     text-align: justify;
-    padding: 8px;
+    padding: 10px;
     width: 90px;
     word-wrap: break-word;
 }
@@ -47,7 +47,7 @@ body{
     border-right: 1px solid #97b0b6;
     background: #bfcacf;
     font-size: 14px;
-    padding: 8px;
+    padding: 10px;
     width: 60px;
     word-wrap: break-word;
 }
@@ -55,7 +55,8 @@ body{
 .fl-table thead th {
     color: #000000;
     background: #18bedb;
-    padding: 8px;
+    font-size: 14px;
+    padding: 10px;
     width: 400px;
     word-wrap: break-word;
 }
@@ -81,21 +82,21 @@ body{
     border-collapse: collapse;
     font-size: 14px;
     font-weight: normal;
-    width: 400px;
+    width: 300px;
     text-overflow: ellipsis;
     word-wrap: break-word;
   }
   
   #myTable td, #myTable th {
     border: 1px solid #9bdfdf(145, 154, 160);
-    padding: 30px;
+    padding: 20px;
     width: 100px;
     word-wrap: break-word;
   }
   
-  #myTable tr:nth-child(even){background-color: #a5bebe;}
+  #myTable tr:nth-child(even){background-color: #c5e4e4;}
   
-  #myTable tr:hover {background-color: #91c798;}
+  #myTable tr:hover {background-color: #adc5b0;}
   
   #myTable th {
     padding-top: 12px;
@@ -111,7 +112,7 @@ body{
     border-collapse: collapse;
     font-size: 14px;
     font-weight: normal;
-    width: 100%;
+    width: 100px;
     word-wrap: break-word;
   }
   

@@ -11,7 +11,7 @@
             <a href="<?= BASEURL; ?>/Obrolan/tambahData">Tambah Pertanyaan</a>
             <select id="optionFilter" name="optionFilter">
                 <option value="1">ID diskusi</option>
-                <option value="2">NIK</option>
+                <option value="3">Nama Pengguna</option>
             </select>
         <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
         </form>    
@@ -50,7 +50,6 @@
                     {?>
                        <a title="Jawab" href="<?= BASEURL; ?>/obrolan/getUbahP/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>"><img src="<?= BASEURL; ?>/img/balas.png" alt=""  width="19" heigth="19"></a>
                    <?php } elseif(($_SESSION['level'] == 'Pegawai')||($_SESSION['level'] == 'Admin') ){ ?>
-
                 
                     <a title="Ubah Data" href="<?= BASEURL; ?>/obrolan/getUbah/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>"><img src="<?= BASEURL; ?>/img/b-edit.png" alt=""  width="19" heigth="19"></a>
                     <!-- <a title="Hapus Data" href="<?= BASEURL; ?>/obrolan/hapus/<?= $pertanyaan['id_chat'] ?>/<?= $pertanyaan['level'] ?>" onClick="return confirm('Anda Yakin Akan Menghapus ?')"><img src="<?= BASEURL; ?>/img/b-hapus.png" alt=""  width="15" heigth="15"></a> -->

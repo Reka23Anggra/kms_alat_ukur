@@ -87,7 +87,7 @@ class Obrolan extends Controller {
 		//var_dump($_POST);
 
 		if( $this->model('DataHandle')->ubahDataChatP($_POST) > 0) {
-		 	Flasher::setFlash('Berhasil','diubah','CssUpdate');
+		 	Flasher::setFlash('Berhasil','dijawab','CssUpdate');
 		 	header('Location: ' . BASEURL . '/Obrolan/index');
 		 	exit;
 		} else {

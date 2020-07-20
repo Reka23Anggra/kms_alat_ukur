@@ -13,7 +13,7 @@
         <?php } ?>
             <select id="optionFilter" name="optionFilter">
                 <option value="1">Id Modul</option>
-                <!-- <option value="2">Nama Alat</option> -->
+                <option value="4">Nama Alat</option>
             </select>
             <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
         </form>    
