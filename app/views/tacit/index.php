@@ -10,7 +10,7 @@
         <form action="">
             <a href="<?= BASEURL; ?>/Tacit/tambahData">Tambah Data</a>
             <select id="optionFilter" name="optionFilter">
-                <option value="1">Id Tacit</option>
+                <option value="1">Id Pengetahuan</option>
                 <option value="4">Nama ALat Ukur</option>
             </select>
             <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
@@ -22,7 +22,7 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>Id Tacit</th>
+                <th>Id Pengetahuan</th>
                 <th>NIK</th>
                 <th>Nama</th>
                 <th>Nama Alat</th>

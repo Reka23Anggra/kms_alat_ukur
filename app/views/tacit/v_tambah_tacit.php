@@ -10,7 +10,7 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Tacit/simpan/" method="post">
                 <label for="id_tacit">
-                    <span>Id Tacit<span class="required">*</span></span>
+                    <span>Id Pengetahuan<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_tacit" value="" required/>
                 </label>
                 <!-- <label for="id_user"> -->

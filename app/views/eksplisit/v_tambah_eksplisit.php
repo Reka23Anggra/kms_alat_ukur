@@ -10,12 +10,12 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Eksplisit/simpan/" method="post">
                 <label for="id_eksplisit">
-                    <span>Id Eksplisit<span class="required">*</span></span>
+                    <span>Id Pengetahuan<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_eksplisit" value="" required/>
                 </label>
-                <label for="kd_buku">
-                    <span>Kode Buku<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="kd_buku" value="" require />
+                <label for="buku">
+                    <span>Buku<span class="required">*</span></span>
+                    <input type="text" class="input-text" name="buku" value="" require />
                 </label>
                 <label for="nm_alat">
                     <span>Nama Alat<span class="required">*</span></span>

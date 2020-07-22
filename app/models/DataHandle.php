@@ -191,11 +191,11 @@ class DataHandle {
 
     public function tambahDataEksplisit($data)
     {
-        $query = "INSERT INTO tbl_eksplisit VALUES (:id_eksplisit, :kd_buku, :nm_alat, :fungsi, :penggunaan_alat, :perawatan_alat, :satuan, :thn_terbit, :penulis)";
+        $query = "INSERT INTO tbl_eksplisit VALUES (:id_eksplisit, :buku, :nm_alat, :fungsi, :penggunaan_alat, :perawatan_alat, :satuan, :thn_terbit, :penulis)";
 
         $this->db->query($query);
         $this->db->bind('id_eksplisit', $data['id_eksplisit']);
-        $this->db->bind('kd_buku', $data['kd_buku']);
+        $this->db->bind('buku', $data['buku']);
         $this->db->bind('nm_alat', $data['nm_alat']);
         $this->db->bind('fungsi', $data['fungsi']);
         $this->db->bind('penggunaan_alat', $data['penggunaan_alat']);
@@ -231,11 +231,11 @@ class DataHandle {
 
     public function ubahDataEksplisit($data)
     {
-        $query = "UPDATE tbl_eksplisit SET id_eksplisit = :id_eksplisit, kd_buku = :kd_buku, nm_alat = :nm_alat, fungsi = :fungsi,  penggunaan_alat = :penggunaan_alat, perawatan_alat = :perawatan_alat, satuan = :satuan, thn_terbit = :thn_terbit, penulis = :penulis WHERE id_eksplisit = :id_eksplisit";
+        $query = "UPDATE tbl_eksplisit SET id_eksplisit = :id_eksplisit, buku = :buku, nm_alat = :nm_alat, fungsi = :fungsi,  penggunaan_alat = :penggunaan_alat, perawatan_alat = :perawatan_alat, satuan = :satuan, thn_terbit = :thn_terbit, penulis = :penulis WHERE id_eksplisit = :id_eksplisit";
 
         $this->db->query($query);
         $this->db->bind('id_eksplisit', $data['id_eksplisit']);
-        $this->db->bind('kd_buku', $data['kd_buku']);
+        $this->db->bind('buku', $data['buku']);
         $this->db->bind('nm_alat', $data['nm_alat']);
         $this->db->bind('fungsi', $data['fungsi']);
         $this->db->bind('penggunaan_alat', $data['penggunaan_alat']);

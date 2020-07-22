@@ -9,12 +9,12 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Eksplisit/ubahData/" method="post">
                 <label for="id_eksplisit">
-                    <span>Id Eksplisit<span class="required">*</span></span>
+                    <span>Id Pengetahuan<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_eksplisit" value="<?= $data['data_eksplisit']['id_eksplisit'] ?>" disable required/>
                 </label>
-                <label for="kd_buku">
-                    <span>Kode Buku<span class="required">*</span></span>
-                    <input type="text" class="input-text" name="kd_buku" value="<?= $data['data_eksplisit']['kd_buku'] ?>" disable required/>
+                <label for="buku">
+                    <span>Buku<span class="required">*</span></span>
+                    <input type="text" class="input-text" name="buku" value="<?= $data['data_eksplisit']['buku'] ?>" disable required/>
                 </label>
                 <label for="nm_alat">
                     <span>Nama Alat<span class="required">*</span></span>

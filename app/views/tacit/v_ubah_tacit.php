@@ -9,7 +9,7 @@
         <div class="gaya-form">
             <form action="<?= BASEURL; ?>/Tacit/ubahData/" method="post">
                 <label for="id_tacit">
-                    <span>Id Tacit<span class="required">*</span></span>
+                    <span>Id Pengetahuan<span class="required">*</span></span>
                     <input type="text" class="input-text" name="id_tacit" value="<?= $data['data_tacit']['id_tacit'] ?>" disable required/>
                 </label>
                 <!-- <label for="id_user">

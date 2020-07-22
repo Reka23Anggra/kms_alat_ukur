@@ -2,7 +2,7 @@
 
 class Tacit extends Controller {
    public function index(){
-        $data['judul'] = 'Pengetahuan Tacit';
+        $data['judul'] = 'Pengetahuan Pakar';
 		$data['sub_judul'] = 'Daftar Pengetahuan';
 		$data['data_tacit'] = $this->model('DataHandle')->getAll($table = 'tbl_tacit');
 		
@@ -27,8 +27,8 @@ class Tacit extends Controller {
 
     public function tambahData() {
        // $data['auto_kode'] = $this->model('DataHandle')->AmbilDataMax($table = 'tbl_tacit', $id_table = 'id_tacit');
-		$data['judul'] = 'Tambah Pengetahuan Tacit';
-		$data['sub_judul'] = 'Tambah Data Tacit';
+		$data['judul'] = 'Tambah Pengetahuan Pakar';
+		$data['sub_judul'] = 'Tambah Data Pengetahuan';
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
 		$this->view('tacit/v_tambah_tacit',$data);
@@ -55,7 +55,7 @@ class Tacit extends Controller {
 			Flasher::setFlash('User dengan level admin dan Pakar','tidak dapat diubah','CssHapus');
 		} else {
 			$data['judul'] = 'Tacit';
-			$data['sub_judul'] = 'Ubah Data Tacit';
+			$data['sub_judul'] = 'Ubah Data Pengetahuan';
 
 			$data['data_tacit'] = $this->model('DataHandle')->getAllWhere($table = 'tbl_tacit',$id_table = 'id_tacit', $id);
 			$this->view('templates/header', $data);

@@ -10,7 +10,7 @@
         <form action="">
             <a href="<?= BASEURL; ?>/Eksplisit/tambahData">Tambah Data</a>
             <select id="optionFilter" name="optionFilter">
-                <option value="1">Id Eksplisit</option>
+                <option value="1">Id Pengetahuan</option>
                 <option value="2">Nama Alat</option>
             </select>
             <input type="text" id="myInput" onkeyup="cari()" placeholder="Masukan Pencarian" title="Ketik disini">
@@ -22,8 +22,8 @@
             <thead>
             <tr>
                 <th>No</th>
-                <th>Id Eksplisit</th>
-                <th>Kode Buku</th>
+                <th>Id Pengetahuan</th>
+                <th>Buku</th>
                 <th>Nama Alat</th>
                 <th>Fungsi Alat</th>
                 <th>Penggunaan Alat</th>
@@ -42,7 +42,7 @@
             <tr>
                 <td><?= $no++; ?></td>
                 <td><?= $eksplisit['id_eksplisit'] ?></td>
-                <td><?= $eksplisit['kd_buku'] ?></td>
+                <td><?= $eksplisit['buku'] ?></td>
                 <td><?= $eksplisit['nm_alat'] ?></td>
                 <td><?= $eksplisit['fungsi'] ?></td>
                 <td><?= $eksplisit['penggunaan_alat'] ?></td>

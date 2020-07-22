@@ -2,7 +2,7 @@
 
 class Eksplisit extends Controller {
    public function index(){
-        $data['judul'] = 'Pengetahuan Eksplisit';
+        $data['judul'] = 'Pengetahuan';
 		$data['sub_judul'] = 'Daftar Pengetahuan';
 		$data['data_eksplisit'] = $this->model('DataHandle')->getAll($table = 'tbl_eksplisit');
 		
@@ -14,8 +14,8 @@ class Eksplisit extends Controller {
 
     public function tambahData() {
         // $data['auto_kode'] = $this->model('DataHandle')->AmbilDataMax($table = 'tbl_eksplisit', $id_table = 'id_eksplisit');
-         $data['judul'] = 'Tambah Pengetahuan Eksplisit';
-         $data['sub_judul'] = 'Tambah Data EKsplisit';
+         $data['judul'] = 'Tambah Pengetahuan';
+         $data['sub_judul'] = 'Tambah Data Pengetahuan';
          $this->view('templates/header', $data);
          $this->view('templates/sidebar', $data);
          $this->view('eksplisit/v_tambah_eksplisit',$data);
